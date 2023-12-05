@@ -33,7 +33,8 @@ if (isset($_POST["submit"]))
 <html>
 <head>
     <title>File Upload</title>
-    <link rel="stylesheet" type="text/css" href="CSS/settingSStyle.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
+    <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>
 <body>
     <div class="header">
@@ -202,7 +203,7 @@ if (isset($_POST["submit"]))
                     <br>
                 </form>
                 
-                <label>Notification for all new activity : </label>
+                <label>Help And Feedback : </label>
                 <div class="image">
                     <img src="./Images/Prototype Nexus.png" alt="">
                     <h1>Prototype Nexus </h1>
