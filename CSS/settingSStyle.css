@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    align-items: center;
+    min-height: 100vh;
+}
+.header {
+    background-color: #21C87A;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    border-radius: 100px;
+    width: 40px;
+    height: auto;
+    margin-right: 10px; 
+}
+.logo a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+.navbar {
+    font-size: 25px;
+    background-color: #21C87A;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 1500px;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.ftr{
+    width: 100%;
+    background-color: #21C87A;
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    height: 60px;
+    justify-content: space-between;
+    padding: 17px;
+}
+.container{
+    background-color: #F9EED4;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    padding: 30px;
+}
+.userDetails{
+    background-color: #F9EED4;
+    align-items: center;
+    background-size: cover;
+    margin-left: 30px;
+}
+.mainBar{
+    display: flex;
+    border-bottom: black solid;
+}
+.userName{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#pp{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#name{
+    color: #21C87A;
+}
+#type{
+    color: white;
+}
+.logout{
+    width: 20%;
+    display: block;
+    margin-left: 30px;
+}
+.logout form{
+    padding: 0px;
+}
+.logout svg{
+    margin-left: 50px;
+}
+.logout input{
+    color: white;
+    background-color: red;
+    border-color: red;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.pdetail{
+    width: 50%;
+    padding-left: 30px;
+    border-right: black solid;
+}
+.pdetail h1{
+    color: aqua;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.pdetail input[type="submit"]{
+    background-color: #14A49B;
+    border-color: #14A49B;
+    width: 100px;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.pdetail input[name="submit"]{
+    margin-left: 5px;
+}
+.pdetail input{
+    margin-top: 10px;
+}
+.pdetail input[type="text"]{
+    width: 50%;
+}
+.pdetail input[type="password"]{
+    width: 50%;
+    margin-left: 5px;
+}
+.pdetail input[name="firstName"],
+.pdetail input[name="lastName"]{
+    margin-left: 15px;
+}
+.pdetail input[name="companyname"]{
+    width: 43%;
+}
+.pdetail input[name="cName"]{
+    margin-left: 13px;
+}
+.pdetail input[name="cAddress"]{
+    width: 40%;
+}
+.pdetail input[name="companyAddress"]{
+    margin-left: 13px;
+}
+.pdetail input[name="deleteaccount"]{
+    background-color: red;
+    border-color: red;
+    width: 200px;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 800;
+    margin-top: 10px;
+    color: white;
+}
+
+#enlarged-image-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#enlarged-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.editprofile{
+    display: flex;
+}
+
+.pdtailsRight, .pdetail{
+    flex: 1;
+}
+.pdtailsRight{
+    width: 50%;
+    margin-left: 30px;
+}
+#topic{
+    color: aqua;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.pdtailsRight input{
+    background-color: #14A49B;
+    border-color: #14A49B;
+    width: 100px;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}

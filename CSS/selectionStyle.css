@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    background: url("../Images/11.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #1c1c1c;
+    /* min-height: 100vh; */
+}
+.bodyC{
+    position: relative;
+    /* top: 100px; */
+    width: 1200px;
+    display: block;
+    justify-content: center;
+    padding: 50px;
+    margin-left: 200px;
+    margin-top: 85px;
+    align-items: center;
+    text-align: center;
+}
+.find{
+    color: white;
+    font-size: 60px;
+}
+.bodyC img{
+    width: 150px;
+    height: auto;
+    border-radius: 100px;
+}
+.button-container {
+    text-align: center;
+}
+.button {
+    display: inline-block; /* Display buttons side by side */
+    margin: 30px; /* Add margin for spacing between buttons */
+    padding: 10px 20px; /* Add padding for button size */
+    background-color: rgba(33, 200, 122, 0.6); /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Add cursor pointer on hover */
+    border-radius: 15px; /* Add rounded corners */
+    font-weight: 800;
+    width: 250px;
+    font-size: 25px;
+}
+.button:hover {
+    color: #21C87A;
+    background-color: white; /* Change background color on hover */
+    font-weight: 800;
+}
+.bodyC p{
+    color: white;
+}
+.bodyC b{
+    color: #00F0FF;
+}
