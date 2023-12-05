@@ -201,6 +201,12 @@ if (isset($_POST["submit"]))
                     <input type="submit" name="companyAddress" value="Turn Off">                                   
                     <br>
                 </form>
+                
+                <label>Notification for all new activity : </label>
+                <div class="image">
+                    <img src="./Images/Prototype Nexus.png" alt="">
+                    <h1>Prototype Nexus </h1>
+                </div>
             </div>
         </div>
         
