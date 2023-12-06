@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 .header {
-    background-color: greenyellow;
+    background-color: #21C87A;
     overflow: hidden;
     position: sticky;
     top: 0;
