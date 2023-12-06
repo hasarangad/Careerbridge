@@ -4,7 +4,7 @@
     include 'dbh.inc.php';
 
     $loginType = $_SESSION['userType'];
-    $uName = $_SESSION['userName'];
+    $uName = $_SESSION['uName'];
 
     if(isset($_POST['signUp'])){
         
