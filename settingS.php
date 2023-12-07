@@ -4,7 +4,12 @@ session_start();
 include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
- 
+
+if(isset($_POST[''])){
+    echo '';
+}
+
+//Profile Picture Update
 if (isset($_POST["submit"]))
  {     
     #file name with a random number so that similar dont get replaced
@@ -151,17 +156,17 @@ if (isset($_POST["submit"]))
                 <h1 id="toic">Personal Settings</h1>
                 <form action="" method="post" enctype="multipart/form-data">
                         <label>Change First Name : </label>
-                        <input type="text" name="fName" id="" >
+                        <input type="text" name="fName" id="" value="<?php echo $row['fname']?>">
                         <input type="submit" name="firstName" value="Change">                                  
                         <br>
                         
                         <label>Change Last Name : </label>
-                        <input type="text" name="lName" id="" >
+                        <input type="text" name="lName" id="" value="<?php echo $row['lname']?>">
                         <input type="submit" name="lastName" value="Change">
                         <br>
                         
                         <label>Change Username : </label>
-                        <input type="text" name="uName" id="" >
+                        <input type="text" name="uName" id="" value="<?php echo $row['userName']?>">
                         <input type="submit" name="suufnbjawbmit" value="Change">
                         <br>
                         
