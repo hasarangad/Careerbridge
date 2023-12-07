@@ -170,10 +170,10 @@ if (isset($_POST["submit"]))
                         <input type="submit" name="suufnbjawbmit" value="Change">
                         <br>
                         
-                        <label>Change Password : </label>
-                        <input type="password" name="pwd" id="" >
+                        <!-- <label>Change Password : </label>
+                        <input type="password" name="pwd" id="" value="<?php echo $row['password']?>">
                         <input type="submit" name="hsjfb" value="Change">
-                        <br>
+                        <br> -->
                         
                         <label>Change Profile Picture : </label>
                         <input type="File" name="file" >
@@ -210,8 +210,7 @@ if (isset($_POST["submit"]))
                 
                 <label>Help And Feedback : </label>
                 <div class="image">
-                    <img src="./Images/Prototype Nexus.png" alt="">
-                    <h1>Prototype Nexus </h1>
+                    
                 </div>
             </div>
         </div>
