@@ -5,9 +5,20 @@ include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
 
-if(isset($_POST[''])){
-    echo '';
+//Update firstName
+if(isset($_POST['firstName'])){
+    $ufirstName = mysqli_real_escape_string($conn, $_POST['fName']);
+
+    $sql = "UPDATE user SET fName = '$ufirstName' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $fchange = "First Name Updated!";
+    }
 }
+
+
+
+
 
 //Profile Picture Update
 if (isset($_POST["submit"]))
