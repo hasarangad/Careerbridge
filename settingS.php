@@ -86,7 +86,7 @@ if (isset($_POST["submit"]))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CareerBridge | Setting</title>
+    <title>CareerBridge | Settings</title>
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
     <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>

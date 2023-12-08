@@ -5,7 +5,7 @@ include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
 
-$sql = "SELECT * FROM user WHERE userName = ?";
+$sql = "SELECT user.*, employee.* FROM user INNER JOIN employee ON user.userName = employee.userName WHERE user.userName = ?";
                
 $stmt = mysqli_stmt_init($conn);
 if(mysqli_stmt_prepare($stmt, $sql)){
@@ -86,7 +86,7 @@ if (isset($_POST["submit"]))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CareerBridge | Setting</title>
+    <title>CareerBridge | Settings</title>
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
     <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>
