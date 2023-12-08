@@ -16,7 +16,16 @@ if(isset($_POST['firstName'])){
     }
 }
 
+//Update Last Name
+if(isset($_POST['lastName'])){
+    $ufirstName = mysqli_real_escape_string($conn, $_POST['lName']);
 
+    $sql = "UPDATE user SET lName = '$ufirstName' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $fchange = "First Name Updated!";
+    }
+}
 
 
 
