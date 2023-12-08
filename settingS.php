@@ -5,11 +5,29 @@ include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
 
+$sql = "SELECT * FROM user WHERE userName = ?";
+               
+$stmt = mysqli_stmt_init($conn);
+if(mysqli_stmt_prepare($stmt, $sql)){
+    mysqli_stmt_bind_param($stmt,"s", $uName);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($result);
+    $firstName = $row["fname"];
+    $lastName = $row["lname"];
+    $email = $row["email"];
+    $fullName = $row["fname"] . " " . $row["lname"];
+    $loginType = $row["loginType"];
+    $uploads_dir = 'Images/pp';
+    $pname = $row['pp'];
+    $img = $uploads_dir.'/'.$pname;
+}
+
 //Update firstName
 if(isset($_POST['firstName'])){
-    $ufirstName = mysqli_real_escape_string($conn, $_POST['fName']);
+    $update = mysqli_real_escape_string($conn, $_POST['fName']);
 
-    $sql = "UPDATE user SET fName = '$ufirstName' WHERE userName = '$uName'";
+    $sql = "UPDATE user SET fName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
         $fchange = "First Name Updated!";
@@ -18,15 +36,26 @@ if(isset($_POST['firstName'])){
 
 //Update Last Name
 if(isset($_POST['lastName'])){
-    $ufirstName = mysqli_real_escape_string($conn, $_POST['lName']);
+    $update = mysqli_real_escape_string($conn, $_POST['lName']);
 
-    $sql = "UPDATE user SET lName = '$ufirstName' WHERE userName = '$uName'";
+    $sql = "UPDATE user SET lName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
         $fchange = "First Name Updated!";
     }
 }
 
+//Update user Name
+if(isset($_POST['userName'])){
+    $update = mysqli_real_escape_string($conn, $_POST['uName']);
+
+    $sql = "UPDATE user SET userName = '$update' WHERE ((fName = '$firstName' AND lName = '$lastName') AND email = '$email')";
+
+    if(mysqli_query($conn, $sql)){
+        session_destroy();
+        header("Location: login.php");
+    }
+}
 
 
 //Profile Picture Update
@@ -80,20 +109,7 @@ if (isset($_POST["submit"]))
     <div class="container">
         <div class="userDetails">
             <?php
-               $sql = "SELECT * FROM user WHERE userName = ?";
                
-               $stmt = mysqli_stmt_init($conn);
-               if(mysqli_stmt_prepare($stmt, $sql)){
-                mysqli_stmt_bind_param($stmt,"s", $uName);
-                mysqli_stmt_execute($stmt);
-                $result = mysqli_stmt_get_result($stmt);
-                $row = mysqli_fetch_assoc($result);
-                $fullName = $row["fname"] . " " . $row["lname"];
-                $loginType = $row["loginType"];
-                $uploads_dir = 'Images/pp';
-                $pname = $row['pp'];
-                $img = $uploads_dir.'/'.$pname;
-               }
 
                
             ?>
@@ -187,7 +203,7 @@ if (isset($_POST["submit"]))
                         
                         <label>Change Username : </label>
                         <input type="text" name="uName" id="" value="<?php echo $row['userName']?>">
-                        <input type="submit" name="suufnbjawbmit" value="Change">
+                        <input type="submit" name="userName" value="Change">
                         <br>
                         
                         <!-- <label>Change Password : </label>
