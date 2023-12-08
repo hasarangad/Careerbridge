@@ -80,7 +80,7 @@ if(isset($_POST['signup'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/signUpStyle.css">
-    <title>Sign Up</title>
+    <title>CareerBridge | Sign Up</title>
 </head>
 
 <body>

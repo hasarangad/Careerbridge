@@ -37,7 +37,7 @@ if (isset($_POST["submit"]))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>File Upload</title>
+    <title>CareerBridge | Setting</title>
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
     <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>
