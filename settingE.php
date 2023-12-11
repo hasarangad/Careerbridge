@@ -124,10 +124,12 @@ if(isset($_POST['deleteaccount'])){
 
                 if(mysqli_query($conn,$sql3)){
                     $sql4 = "DELETE FROM job WHERE userName = '$uName'";
-                    
+
                     if(mysqli_query($conn,$sql4)){
-                        $message = "Account is deleted!";
+                        session_destroy();
                         header("Location: homeG.php");
+                        $message = "Account is deleted!";
+                        
                     }
                 }
             }
