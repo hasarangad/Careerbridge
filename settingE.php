@@ -54,6 +54,7 @@ if(isset($_POST['userName'])){
     if(mysqli_query($conn, $sql)){
         session_destroy();
         header("Location: login.php");
+        $message = "User Name Updated!";
     }
 }
 
@@ -63,7 +64,9 @@ if(isset($_POST['cName'])){
 
     $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
 
-    if()
+    if(mysqli_query($conn, $sql)){
+        $message = "Company Name Updated!";
+    }
 }
 
 
