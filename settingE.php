@@ -30,7 +30,7 @@ if(isset($_POST['firstName'])){
     $sql = "UPDATE user SET fName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
-        $fchange = "First Name Updated!";
+        $message = "First Name Updated!";
     }
 }
 
@@ -41,7 +41,7 @@ if(isset($_POST['lastName'])){
     $sql = "UPDATE user SET lName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
-        $fchange = "First Name Updated!";
+        $message = "Last Name Updated!";
     }
 }
 
@@ -55,6 +55,15 @@ if(isset($_POST['userName'])){
         session_destroy();
         header("Location: login.php");
     }
+}
+
+//update companyName
+if(isset($_POST['cName'])){
+    $update = mysqli_real_escape_string($conn, $_POST['companyName']);
+
+    $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
+
+    if()
 }
 
 
