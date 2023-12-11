@@ -60,19 +60,6 @@ if(isset($_POST['userName'])){
     }
 }
 
-//update companyName
-if(isset($_POST['cName'])){
-    $update = mysqli_real_escape_string($conn, $_POST['companyname']);
-
-    $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
-
-    if(mysqli_query($conn, $sql)){
-        $message = "Company Name Updated!";
-        header("Location: settingE.php");
-    }
-}
-
-
 //Profile Picture Update
 if (isset($_POST["submit"]))
  {     
@@ -97,6 +84,31 @@ if (isset($_POST["submit"]))
         echo "Error";
     }
 }
+
+//update companyName
+if(isset($_POST['cName'])){
+    $update = mysqli_real_escape_string($conn, $_POST['companyname']);
+
+    $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Company Name Updated!";
+        header("Location: settingE.php");
+    }
+}
+
+//update companyName
+if(isset($_POST['companyAddress'])){
+    $update = mysqli_real_escape_string($conn, $_POST['cAddress']);
+
+    $sql = "UPDATE employee SET Address = '$update' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Company Name Updated!";
+        header("Location: settingE.php");
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
