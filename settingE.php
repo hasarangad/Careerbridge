@@ -239,7 +239,7 @@ if(isset($_POST['companyAddress'])){
                         <br> -->
                         
                         <label>Change Profile Picture : </label>
-                        <input type="File" name="file" >
+                        <input type="File" name="file" value="<?php echo $row['pp'];?>">
                         <input type="submit" name="submit" value="Change">
                         <br>
                         
