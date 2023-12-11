@@ -31,6 +31,7 @@ if(isset($_POST['firstName'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "First Name Updated!";
+        header("Location: settingE.php");
     }
 }
 
@@ -42,6 +43,7 @@ if(isset($_POST['lastName'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "Last Name Updated!";
+        header("Location: settingE.php");
     }
 }
 
@@ -60,12 +62,13 @@ if(isset($_POST['userName'])){
 
 //update companyName
 if(isset($_POST['cName'])){
-    $update = mysqli_real_escape_string($conn, $_POST['companyName']);
+    $update = mysqli_real_escape_string($conn, $_POST['companyname']);
 
     $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
         $message = "Company Name Updated!";
+        header("Location: settingE.php");
     }
 }
 
