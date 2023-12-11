@@ -138,12 +138,12 @@ if(isset($_POST['signup'])){
 
             <div class="inputBox">
                 <div class="inputField">
-                    <input type="text" name="pwd" id="" required>
+                    <input type="password" name="pwd" id="" required>
                     <span>Create a new password</span>
                     <i></i>
                 </div>
                 <div class="inputField">
-                    <input type="text" name="rePwd" id="" required>
+                    <input type="password" name="rePwd" id="" required>
                     <span>Retype the password</span>
                     <i></i>
                 </div>
