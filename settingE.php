@@ -97,7 +97,7 @@ if(isset($_POST['cName'])){
     }
 }
 
-//update companyName
+//update company Address
 if(isset($_POST['companyAddress'])){
     $update = mysqli_real_escape_string($conn, $_POST['cAddress']);
 
@@ -109,13 +109,38 @@ if(isset($_POST['companyAddress'])){
     }
 }
 
+//Delete your Account
+if(isset($_POST['deleteaccount'])){
+    $sql = "DELETE FROM user WHERE userName = '$uName'";
+
+    if(mysqli_query($conn,$sql)){
+        $sql1 = "DELETE FROM employee WHERE userName = '$uName'";
+
+        if(mysqli_query($conn,$sql1)){
+            $sql2 = "DELETE FROM jobseeker WHERE userName = '$uName'";
+
+            if(mysqli_query($conn,$sql2)){
+                $sql3 = "DELETE FROM application WHERE userName = '$uName'";
+
+                if(mysqli_query($conn,$sql3)){
+                    $sql4 = "DELETE FROM job WHERE userName = '$uName'";
+                    
+                    if(mysqli_query($conn,$sql4)){
+                        $message = "Account is deleted!";
+                        header("Location: homeG.php");
+                    }
+                }
+            }
+        }
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>CareerBridge | Settings</title>
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
-    <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>
 <body>
     <div class="header">
