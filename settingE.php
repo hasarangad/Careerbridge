@@ -217,12 +217,12 @@ if (isset($_POST["submit"]))
                         <br>
                         
                         <label>Change Company Name : </label>
-                        <input type="text" name="companyname" id="" >
+                        <input type="text" name="companyname" id="" value="<?php echo $row['companyName'];?>">
                         <input type="submit" name="cName" value="Change">                                  
                         <br>
 
                         <label>Change Company Address : </label>
-                        <input type="text" name="cAddress" id="" >
+                        <input type="text" name="cAddress" id="" value="<?php echo $row['Address'];?>">
                         <input type="submit" name="companyAddress" value="Change">                                  
                         <br>
 
