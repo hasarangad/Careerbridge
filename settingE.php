@@ -249,19 +249,46 @@ if(isset($_POST['deleteaccount'])){
             <div class="pdetail">
                 <h1 id="toic">Personal Settings</h1>
                 <form action="" method="post" enctype="multipart/form-data">
-                        <label>Change First Name : </label>
-                        <input type="text" name="fName" id="" value="<?php echo $row['fname']?>">
-                        <input type="submit" name="firstName" value="Change">                                  
+                    <table>
+                        <tr>
+                            <td><label>Change First Name : </label></td>
+                            <td><input type="text" name="fName" id="" value="<?php echo $row['fname']?>"></td>
+                            <td><input type="submit" name="firstName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Change Last Name : </label></td>
+                            <td><input type="text" name="lName" id="" value="<?php echo $row['lname']?>"></td>
+                            <td><input type="submit" name="lastName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Change Username : </label></td>
+                            <td><input type="text" name="uName" id="" value="<?php echo $row['userName']?>"></td>
+                            <td><input type="submit" name="userName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </table>
+                        
+                        
+                                                          
                         <br>
                         
-                        <label>Change Last Name : </label>
-                        <input type="text" name="lName" id="" value="<?php echo $row['lname']?>">
-                        <input type="submit" name="lastName" value="Change">
+                        
+                        
+                        
                         <br>
                         
-                        <label>Change Username : </label>
-                        <input type="text" name="uName" id="" value="<?php echo $row['userName']?>">
-                        <input type="submit" name="userName" value="Change">
+                        
+                        
+                        
                         <br>
                         
                         <!-- <label>Change Password : </label>
