@@ -269,9 +269,9 @@ if(isset($_POST['deleteaccount'])){
                         </tr>
 
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><label>Change Profile Picture : </label></td>
+                            <td><input type="File" name="file" value="<?php echo $row['pp'];?>"></td>
+                            <td><input type="submit" name="submit" value="Change"></td>
                         </tr>
                         <tr></tr>
                         <tr></tr>
@@ -296,9 +296,9 @@ if(isset($_POST['deleteaccount'])){
                         <input type="submit" name="hsjfb" value="Change">
                         <br> -->
                         
-                        <label>Change Profile Picture : </label>
-                        <input type="File" name="file" value="<?php echo $row['pp'];?>">
-                        <input type="submit" name="submit" value="Change">
+                        
+                        
+                        
                         <br>
                         
                         <label>Change Company Name : </label>
