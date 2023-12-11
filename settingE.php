@@ -112,29 +112,33 @@ if(isset($_POST['companyAddress'])){
 //Delete your Account
 if(isset($_POST['deleteaccount'])){
     $sql = "DELETE FROM user WHERE userName = '$uName'";
-
     if(mysqli_query($conn,$sql)){
-        $sql1 = "DELETE FROM employee WHERE userName = '$uName'";
-
-        if(mysqli_query($conn,$sql1)){
-            $sql2 = "DELETE FROM jobseeker WHERE userName = '$uName'";
-
-            if(mysqli_query($conn,$sql2)){
-                $sql3 = "DELETE FROM application WHERE userName = '$uName'";
-
-                if(mysqli_query($conn,$sql3)){
-                    $sql4 = "DELETE FROM job WHERE userName = '$uName'";
-
-                    if(mysqli_query($conn,$sql4)){
-                        session_destroy();
-                        header("Location: homeG.php");
-                        $message = "Account is deleted!";
-                        
-                    }
-                }
-            }
-        }
+        //
     }
+
+    $sql1 = "DELETE FROM employee WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql1)){
+        //
+    }
+
+    $sql2 = "DELETE FROM jobseeker WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql2)){
+        //
+    }
+
+    $sql3 = "DELETE FROM application WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql3)){
+        //
+    }
+
+    $sql4 = "DELETE FROM job WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql4)){
+        //
+    }
+
+    session_destroy();
+    $message = "Account is Deleted!";
+    header("Location: homeG.php");
 }
 ?>
 
