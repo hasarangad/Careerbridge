@@ -180,7 +180,7 @@ if(isset($_POST['off'])){
             <a href="#">Notification</a>
             <a href="#">Company</a>
             <a href="jobPage.php">Find a Job</a>
-            <a href="homeG.php">Home</a>
+            <a href="homeS.php">Home</a>
         </div>    
     </div>
 

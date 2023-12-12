@@ -18,10 +18,11 @@
             <a href="#">CareerBridge</a>
         </div>
         <div class="navbar">
-            <a href="selection.php">SignUp</a>
-            <a href="login.php">LogIn</a>
+            <a href="settingS.php">Settings</a>
+            <a href="#">Notification</a>
+            <a href="#">Company</a>
             <a href="jobPage.php">Find a Job</a>
-            <a href="homeG.php">Home</a>
+            <a href="homeS.php">Home</a>
         </div>
         
     </div>
