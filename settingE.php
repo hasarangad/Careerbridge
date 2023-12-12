@@ -140,6 +140,26 @@ if(isset($_POST['deleteaccount'])){
     $message = "Account is Deleted!";
     header("Location: homeG.php");
 }
+
+//Notification (Mailing) on
+if(isset($_POST['on'])){
+    $sql = "UPDATE notification SET mailing = 'On' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Notification on!";
+        header("Location: settingE.php");
+    }
+}
+
+//Notification (Mailing) off
+if(isset($_POST['off'])){
+    $sql = "UPDATE notification SET mailing = 'Off' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Notification Off!";
+        header("Location: settingE.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -299,15 +319,33 @@ if(isset($_POST['deleteaccount'])){
             <br>    
                 <form action="" method="post">
                     <label>Notification for all new activity : </label>
+                    
+                        <?php 
+                            $sql = "SELECT * FROM notification WHERE userName = ?";
+
+                            $stmt = mysqli_stmt_init($conn);
+
+                            if(mysqli_stmt_prepare($stmt, $sql)){
+                                mysqli_stmt_bind_param($stmt,"s",$uName);
+                                mysqli_stmt_execute($stmt);
+                                $rslt = mysqli_stmt_get_result($stmt);
+                                while($row = mysqli_fetch_assoc($rslt)){
+                                    echo $row['mailing'];
+                                }
+                            }
+                        ?>
+                    
                     <br>
-                    <input type="submit" name="companyAddress" value="Turn On"> 
-                    <input type="submit" name="companyAddress" value="Turn Off">                                   
+                    <input type="submit" name="on" value="Turn On"> 
+                    <input type="submit" name="off" value="Turn Off">                                   
                     <br>
+                    
                 </form>
                 
                 <label>Help And Feedback : </label>
-                <div class="image">
-                    
+                <div class="help">
+                    <p>Email : acareerbridge@gmail.com</p>
+                    <p>Call Us : +94911234567</p>
                 </div>
             </div>
         </div>
