@@ -273,7 +273,12 @@ if(isset($_POST['deleteaccount'])){
                             <td><input type="File" name="file" value="<?php echo $row['pp'];?>"></td>
                             <td><input type="submit" name="submit" value="Change"></td>
                         </tr>
-                        <tr></tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         <tr></tr>
                     </table>
                         
