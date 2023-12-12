@@ -3,18 +3,24 @@
 
     include 'dbh.inc.php';
 
-    $uName = $_SESSION['userName'];
+    $uName = $_SESSION['uName'];
 
-    $sql = "SELECT * FROM user WHERE userName = '$uName' AND loginType = 'Employee'";
+    $sql = "SELECT * FROM user WHERE userName = ?";
 
-    $rslt = mysqli_query($conn, $sql);
+    $stmt = mysqli_stmt_init($conn);
+    if(mysqli_stmt_prepare($stmt, $sql)){
+        mysqli_stmt_bind_param($stmt,"s", $uName);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+        $type = $row['loginType'];
 
-    $rows = mysqli_num_rows($rslt);
-
-    if($rows > 0){
-        header("Location: homeE.php");
+        if($type == "Employee"){
+            header("Location: homeE.php");
+        }
+        else{
+            header("Location: homeS.php");
+        }
     }
-    else{
-        header("Location: homeS.php");
-    }
+    
 ?>
