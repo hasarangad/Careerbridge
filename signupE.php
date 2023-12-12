@@ -31,8 +31,15 @@
             else{
                 mysqli_stmt_bind_param($stmt, "sss", $uName, $companyName, $cAddress);
                 $run = mysqli_stmt_execute($stmt);
-
-                header("Location: homeG.php");
+                
+                $on = "Yes";
+                $sql1 = "INSERT INTO notification(userName, mailing) VALUES (?,?)";
+                $stmt1 = mysqli_stmt_init($conn);
+                if(mysqli_stmt_prepare($stmt1, $sql1)){
+                    mysqli_stmt_bind_param($stmt1, "ss", $uName, $on);
+                    $run = mysqli_stmt_execute($stmt1);
+                    header("Location: video.php");
+                }
             }
         }
 

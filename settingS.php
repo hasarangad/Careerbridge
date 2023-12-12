@@ -5,7 +5,7 @@ include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
 
-$sql = "SELECT user.*, employee.* FROM user INNER JOIN employee ON user.userName = employee.userName WHERE user.userName = ?";
+$sql = "SELECT user.*, jobseeker.* FROM user INNER JOIN jobseeker ON user.userName = jobseeker.userName WHERE user.userName = ?";
                
 $stmt = mysqli_stmt_init($conn);
 if(mysqli_stmt_prepare($stmt, $sql)){
@@ -22,6 +22,8 @@ if(mysqli_stmt_prepare($stmt, $sql)){
     $pname = $row['pp'];
     $img = $uploads_dir.'/'.$pname;
 }
+
+//logout
 if(isset($_POST["logout"])){
     // Destroy the session
     session_destroy();
@@ -37,7 +39,7 @@ if(isset($_POST['firstName'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "First Name Updated!";
-        header("Location: settingE.php");
+        header("Location: settingS.php");
     }
 }
 
@@ -49,7 +51,7 @@ if(isset($_POST['lastName'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "Last Name Updated!";
-        header("Location: settingE.php");
+        header("Location: settingS.php");
     }
 }
 
@@ -91,27 +93,15 @@ if (isset($_POST["submit"]))
     }
 }
 
-//update companyName
-if(isset($_POST['cName'])){
-    $update = mysqli_real_escape_string($conn, $_POST['companyname']);
+//update qualification
+if(isset($_POST['qlf'])){
+    $update = mysqli_real_escape_string($conn, $_POST['qualification']);
 
-    $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
-
-    if(mysqli_query($conn, $sql)){
-        $message = "Company Name Updated!";
-        header("Location: settingE.php");
-    }
-}
-
-//update company Address
-if(isset($_POST['companyAddress'])){
-    $update = mysqli_real_escape_string($conn, $_POST['cAddress']);
-
-    $sql = "UPDATE employee SET Address = '$update' WHERE userName = '$uName'";
+    $sql = "UPDATE jobseeker SET qualification = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
         $message = "Company Name Updated!";
-        header("Location: settingE.php");
+        header("Location: settingS.php");
     }
 }
 
@@ -153,7 +143,7 @@ if(isset($_POST['on'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "Notification on!";
-        header("Location: settingE.php");
+        header("Location: settingS.php");
     }
 }
 
@@ -163,7 +153,7 @@ if(isset($_POST['off'])){
 
     if(mysqli_query($conn, $sql)){
         $message = "Notification Off!";
-        header("Location: settingE.php");
+        header("Location: settingS.php");
     }
 }
 ?>
@@ -292,15 +282,9 @@ if(isset($_POST['off'])){
                         </tr>
 
                         <tr>
-                            <td class="td1"><label name="cname">Change Company Name : </label></td>
-                            <td class="td2"><input type="text" name="companyname" id="" value="<?php echo $row['companyName'];?>"></td>
-                            <td class="td3"><input type="submit" name="cName" value="Change"></td>
-                        </tr>
-
-                        <tr>
-                            <td class="td1"><label>Change Company Address : </label></td>
-                            <td class="td2"><input type="text" name="cAddress" id="" value="<?php echo $row['Address'];?>"></td>
-                            <td class="td3"><input type="submit" name="companyAddress" value="Change"></td>
+                            <td class="td1"><label>Change Qualification : </label></td>
+                            <td class="td2"><textarea name="qualification" id="qlf" value="" rows="4" cols="30"><?php echo $row['qualification'];?></textarea></td>
+                            <td class="td3"><input type="submit" name="qlf" value="Change"></td>
                         </tr>
                     </table>
 

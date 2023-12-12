@@ -192,6 +192,9 @@ tr{
     padding-left: 5px;
 }
 
+.pdetail textarea{
+    margin-top: 8px;
+}
 
 .pdetail input[name="deleteaccount"]{
     background-color: red;
