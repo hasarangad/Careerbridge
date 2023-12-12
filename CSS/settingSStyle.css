@@ -189,6 +189,7 @@ tr{
 .pdetail input[type="text"]{
     width: 95%;
     margin-left: 5px;
+    padding-left: 5px;
 }
 
 
@@ -229,10 +230,12 @@ tr{
 .pdtailsRight, .pdetail{
     flex: 1;
 }
+
 .pdtailsRight{
     width: 50%;
     margin-left: 30px;
 }
+
 #topic{
     color: aqua;
     align-items: center;
@@ -240,6 +243,7 @@ tr{
     text-align: center;
     margin-top: 10px;
 }
+
 .pdtailsRight input{
     background-color: #14A49B;
     border-color: #14A49B;
@@ -249,7 +253,10 @@ tr{
     margin-left: 30px;
     cursor: pointer;
     margin-bottom: 20px;
-    margin-top: 20px;
-    
+    margin-top: 20px; 
 }
 
+.pdtailsRight p{
+    margin-top: 10px;
+    margin-left: 30px;
+}

@@ -342,10 +342,11 @@ if(isset($_POST['off'])){
                             
                         </form>
                     
-                    <label><b>Help And Feedback : </b></label>
+                    <label><b>Contact Us : </b></label>
                     <div class="help">
                         <p>Email : acareerbridge@gmail.com</p>
                         <p>Call Us : +94911234567</p>
+                        <p>Address : Prototype Nexus, Colombo.</p>
                     </div>
             </div>
         </div>
