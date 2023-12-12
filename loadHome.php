@@ -12,9 +12,9 @@
     $rows = mysqli_num_rows($rslt);
 
     if($rows > 0){
-        header("Location: homeG.php");
+        header("Location: homeE.php");
     }
     else{
-        header("Location: homeG.php");
+        header("Location: homeS.php");
     }
 ?>
