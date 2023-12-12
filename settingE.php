@@ -251,70 +251,41 @@ if(isset($_POST['deleteaccount'])){
                 <form action="" method="post" enctype="multipart/form-data">
                     <table>
                         <tr>
-                            <td><label>Change First Name : </label></td>
-                            <td><input type="text" name="fName" id="" value="<?php echo $row['fname']?>"></td>
-                            <td><input type="submit" name="firstName" value="Change"></td>
+                            <td class="td1"><label>Change First Name : </label></td>
+                            <td class="td2"><input type="text" name="fName" id="" value="<?php echo $row['fname']?>"></td>
+                            <td class="td3"><input type="submit" name="firstName" value="Change"></td>
                         </tr>
 
                         <tr>
-                            <td><label>Change Last Name : </label></td>
-                            <td><input type="text" name="lName" id="" value="<?php echo $row['lname']?>"></td>
-                            <td><input type="submit" name="lastName" value="Change"></td>
+                            <td class="td1"><label>Change Last Name : </label></td>
+                            <td class="td2"><input type="text" name="lName" id="" value="<?php echo $row['lname']?>"></td>
+                            <td class="td3"><input type="submit" name="lastName" value="Change"></td>
                         </tr>
 
                         <tr>
-                            <td><label>Change Username : </label></td>
-                            <td><input type="text" name="uName" id="" value="<?php echo $row['userName']?>"></td>
-                            <td><input type="submit" name="userName" value="Change"></td>
+                            <td class="td1"><label>Change Username : </label></td>
+                            <td class="td2"><input type="text" name="uName" id="" value="<?php echo $row['userName']?>"></td>
+                            <td class="td3"><input type="submit" name="userName" value="Change"></td>
                         </tr>
 
                         <tr>
-                            <td><label>Change Profile Picture : </label></td>
-                            <td><input type="File" name="file" value="<?php echo $row['pp'];?>"></td>
-                            <td><input type="submit" name="submit" value="Change"></td>
+                            <td class="td1"><label>Change Profile Picture : </label></td>
+                            <td class="td2"><input type="File" name="file" value="<?php echo $row['pp'];?>"></td>
+                            <td class="td3"><input type="submit" name="submit" value="Change"></td>
                         </tr>
 
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="td1"><label name="cname">Change Company Name : </label></td>
+                            <td class="td2"><input type="text" name="companyname" id="" value="<?php echo $row['companyName'];?>"></td>
+                            <td class="td3"><input type="submit" name="cName" value="Change"></td>
                         </tr>
-                        <tr></tr>
+
+                        <tr>
+                            <td class="td1"><label>Change Company Address : </label></td>
+                            <td class="td2"><input type="text" name="cAddress" id="" value="<?php echo $row['Address'];?>"></td>
+                            <td class="td3"><input type="submit" name="companyAddress" value="Change"></td>
+                        </tr>
                     </table>
-                        
-                        
-                                                          
-                        <br>
-                        
-                        
-                        
-                        
-                        <br>
-                        
-                        
-                        
-                        
-                        <br>
-                        
-                        <!-- <label>Change Password : </label>
-                        <input type="password" name="pwd" id="" value="<?php echo $row['password']?>">
-                        <input type="submit" name="hsjfb" value="Change">
-                        <br> -->
-                        
-                        
-                        
-                        
-                        <br>
-                        
-                        <label>Change Company Name : </label>
-                        <input type="text" name="companyname" id="" value="<?php echo $row['companyName'];?>">
-                        <input type="submit" name="cName" value="Change">                                  
-                        <br>
-
-                        <label>Change Company Address : </label>
-                        <input type="text" name="cAddress" id="" value="<?php echo $row['Address'];?>">
-                        <input type="submit" name="companyAddress" value="Change">                                  
-                        <br>
 
                         <label>Are want to delete your account ?</label>
                         <input type="submit" name="deleteaccount" value="Delete Account">                                  

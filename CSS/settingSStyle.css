@@ -156,41 +156,38 @@ body {
 .pdetail input[type="submit"]{
     background-color: #14A49B;
     border-color: #14A49B;
-    width: 100px;
     border-radius: 20px;
     height: 30px;
     margin-left: 20px;
     cursor: pointer;
+    width: 90px;
 }
-.pdetail input[name="submit"]{
-    margin-left: 5px;
+table{
+    width: 100%;
 }
+tr{
+    width: 100%;
+}
+.td1{
+    width: 60%;
+}
+
+.td2{
+    width: 20%;
+}
+
+.td3{
+    width: 10%;
+}
+
 .pdetail input{
-    margin-top: 17px;
+    margin-top: 15px;
 }
+
 .pdetail input[type="text"]{
-    width: 50%;
+    width: 100%;
 }
-.pdetail input[type="password"]{
-    width: 50%;
-    margin-left: 5px;
-}
-.pdetail input[name="firstName"],
-.pdetail input[name="lastName"]{
-    margin-left: 15px;
-}
-.pdetail input[name="companyname"]{
-    width: 43%;
-}
-.pdetail input[name="cName"]{
-    margin-left: 13px;
-}
-.pdetail input[name="cAddress"]{
-    width: 40%;
-}
-.pdetail input[name="companyAddress"]{
-    margin-left: 13px;
-}
+
 .pdetail input[name="deleteaccount"]{
     background-color: red;
     border-color: red;
