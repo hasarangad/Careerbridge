@@ -22,6 +22,12 @@ if(mysqli_stmt_prepare($stmt, $sql)){
     $pname = $row['pp'];
     $img = $uploads_dir.'/'.$pname;
 }
+if(isset($_POST["logout"])){
+    // Destroy the session
+    session_destroy();
+    $message = "LogOut!";
+    header("Location: login.php");
+}
 
 //Update firstName
 if(isset($_POST['firstName'])){
@@ -251,15 +257,6 @@ if(isset($_POST['off'])){
                         
                     </form>
                     
-                    <?php
-                        if(isset($_POST["logout"])){
-                            // Unset all session variables
-                            $_SESSION = array();
-                        
-                            // Destroy the session
-                            session_destroy();
-                        }
-                    ?>
                 </div>
             </div>
             
