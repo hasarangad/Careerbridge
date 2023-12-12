@@ -5,7 +5,7 @@ include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
 
-$sql = "SELECT * FROM user WHERE userName = ?";
+$sql = "SELECT user.*, employee.* FROM user INNER JOIN employee ON user.userName = employee.userName WHERE user.userName = ?";
                
 $stmt = mysqli_stmt_init($conn);
 if(mysqli_stmt_prepare($stmt, $sql)){
@@ -30,7 +30,8 @@ if(isset($_POST['firstName'])){
     $sql = "UPDATE user SET fName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
-        $fchange = "First Name Updated!";
+        $message = "First Name Updated!";
+        header("Location: settingE.php");
     }
 }
 
@@ -41,7 +42,8 @@ if(isset($_POST['lastName'])){
     $sql = "UPDATE user SET lName = '$update' WHERE userName = '$uName'";
 
     if(mysqli_query($conn, $sql)){
-        $fchange = "First Name Updated!";
+        $message = "Last Name Updated!";
+        header("Location: settingE.php");
     }
 }
 
@@ -54,9 +56,9 @@ if(isset($_POST['userName'])){
     if(mysqli_query($conn, $sql)){
         session_destroy();
         header("Location: login.php");
+        $message = "User Name Updated!";
     }
 }
-
 
 //Profile Picture Update
 if (isset($_POST["submit"]))
@@ -82,13 +84,89 @@ if (isset($_POST["submit"]))
         echo "Error";
     }
 }
+
+//update companyName
+if(isset($_POST['cName'])){
+    $update = mysqli_real_escape_string($conn, $_POST['companyname']);
+
+    $sql = "UPDATE employee SET companyName = '$update' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Company Name Updated!";
+        header("Location: settingE.php");
+    }
+}
+
+//update company Address
+if(isset($_POST['companyAddress'])){
+    $update = mysqli_real_escape_string($conn, $_POST['cAddress']);
+
+    $sql = "UPDATE employee SET Address = '$update' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Company Name Updated!";
+        header("Location: settingE.php");
+    }
+}
+
+//Delete your Account
+if(isset($_POST['deleteaccount'])){
+    $sql = "DELETE FROM user WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql)){
+        //
+    }
+
+    $sql1 = "DELETE FROM employee WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql1)){
+        //
+    }
+
+    $sql2 = "DELETE FROM jobseeker WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql2)){
+        //
+    }
+
+    $sql3 = "DELETE FROM application WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql3)){
+        //
+    }
+
+    $sql4 = "DELETE FROM job WHERE userName = '$uName'";
+    if(mysqli_query($conn,$sql4)){
+        //
+    }
+
+    session_destroy();
+    $message = "Account is Deleted!";
+    header("Location: homeG.php");
+}
+
+//Notification (Mailing) on
+if(isset($_POST['on'])){
+    $sql = "UPDATE notification SET mailing = 'On' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Notification on!";
+        header("Location: settingE.php");
+    }
+}
+
+//Notification (Mailing) off
+if(isset($_POST['off'])){
+    $sql = "UPDATE notification SET mailing = 'Off' WHERE userName = '$uName'";
+
+    if(mysqli_query($conn, $sql)){
+        $message = "Notification Off!";
+        header("Location: settingE.php");
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>CareerBridge | Settings</title>
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
-    <link rel="stylesheet" type="text/css" href=".CSS/homeGStyle.css">
 </head>
 <body>
     <div class="header">
@@ -191,40 +269,43 @@ if (isset($_POST["submit"]))
             <div class="pdetail">
                 <h1 id="toic">Personal Settings</h1>
                 <form action="" method="post" enctype="multipart/form-data">
-                        <label>Change First Name : </label>
-                        <input type="text" name="fName" id="" value="<?php echo $row['fname']?>">
-                        <input type="submit" name="firstName" value="Change">                                  
-                        <br>
-                        
-                        <label>Change Last Name : </label>
-                        <input type="text" name="lName" id="" value="<?php echo $row['lname']?>">
-                        <input type="submit" name="lastName" value="Change">
-                        <br>
-                        
-                        <label>Change Username : </label>
-                        <input type="text" name="uName" id="" value="<?php echo $row['userName']?>">
-                        <input type="submit" name="userName" value="Change">
-                        <br>
-                        
-                        <!-- <label>Change Password : </label>
-                        <input type="password" name="pwd" id="" value="<?php echo $row['password']?>">
-                        <input type="submit" name="hsjfb" value="Change">
-                        <br> -->
-                        
-                        <label>Change Profile Picture : </label>
-                        <input type="File" name="file" >
-                        <input type="submit" name="submit" value="Change">
-                        <br>
-                        
-                        <label>Change Company Name : </label>
-                        <input type="text" name="companyname" id="" >
-                        <input type="submit" name="cName" value="Change">                                  
-                        <br>
+                    <table>
+                        <tr>
+                            <td class="td1"><label>Change First Name : </label></td>
+                            <td class="td2"><input type="text" name="fName" id="" value="<?php echo $row['fname']?>"></td>
+                            <td class="td3"><input type="submit" name="firstName" value="Change"></td>
+                        </tr>
 
-                        <label>Change Company Address : </label>
-                        <input type="text" name="cAddress" id="" >
-                        <input type="submit" name="companyAddress" value="Change">                                  
-                        <br>
+                        <tr>
+                            <td class="td1"><label>Change Last Name : </label></td>
+                            <td class="td2"><input type="text" name="lName" id="" value="<?php echo $row['lname']?>"></td>
+                            <td class="td3"><input type="submit" name="lastName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1"><label>Change Username : </label></td>
+                            <td class="td2"><input type="text" name="uName" id="" value="<?php echo $row['userName']?>"></td>
+                            <td class="td3"><input type="submit" name="userName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1"><label>Change Profile Picture : </label></td>
+                            <td class="td2"><input type="File" name="file" value="<?php echo $row['pp'];?>"></td>
+                            <td class="td3"><input type="submit" name="submit" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1"><label name="cname">Change Company Name : </label></td>
+                            <td class="td2"><input type="text" name="companyname" id="" value="<?php echo $row['companyName'];?>"></td>
+                            <td class="td3"><input type="submit" name="cName" value="Change"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1"><label>Change Company Address : </label></td>
+                            <td class="td2"><input type="text" name="cAddress" id="" value="<?php echo $row['Address'];?>"></td>
+                            <td class="td3"><input type="submit" name="companyAddress" value="Change"></td>
+                        </tr>
+                    </table>
 
                         <label>Are want to delete your account ?</label>
                         <input type="submit" name="deleteaccount" value="Delete Account">                                  
@@ -233,21 +314,40 @@ if (isset($_POST["submit"]))
             </div>
 
             <div class="pdtailsRight">
-            <h1 id="topic">General Settings</h1>
-            <h3>Notification Settings : </h3>
-            <br>    
-                <form action="" method="post">
-                    <label>Notification for all new activity : </label>
-                    <br>
-                    <input type="submit" name="companyAddress" value="Turn On"> 
-                    <input type="submit" name="companyAddress" value="Turn Off">                                   
-                    <br>
-                </form>
-                
-                <label>Help And Feedback : </label>
-                <div class="image">
+                <h1 id="topic">General Settings</h1>
+                    <h3>Notification Settings : </h3>
+                    <br>    
+                        <form action="" method="post">
+                            <label><b>Notification for all new activity : </b></label>
+                            
+                                <?php 
+                                    $sql = "SELECT * FROM notification WHERE userName = ?";
+
+                                    $stmt = mysqli_stmt_init($conn);
+
+                                    if(mysqli_stmt_prepare($stmt, $sql)){
+                                        mysqli_stmt_bind_param($stmt,"s",$uName);
+                                        mysqli_stmt_execute($stmt);
+                                        $rslt = mysqli_stmt_get_result($stmt);
+                                        while($row = mysqli_fetch_assoc($rslt)){
+                                            echo $row['mailing'];
+                                        }
+                                    }
+                                ?>
+                            
+                            <br>
+                            <input type="submit" name="on" value="Turn On"> 
+                            <input type="submit" name="off" value="Turn Off">                                   
+                            <br>
+                            
+                        </form>
                     
-                </div>
+                    <label><b>Contact Us : </b></label>
+                    <div class="help">
+                        <p>Email : acareerbridge@gmail.com</p>
+                        <p>Call Us : +94911234567</p>
+                        <p>Address : Prototype Nexus, Colombo.</p>
+                    </div>
             </div>
         </div>
         
