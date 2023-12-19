@@ -23,6 +23,46 @@
         </div>    
     </div>
 
+    <div class="container">
+        <div class="apply-box">
+            <h1>Apply Now</h1>
+
+            <form action="job_application_submit.php" method="post">
+                <div class="form-container">
+                    <div class="form-control">
+                        <label for="job-id">Job ID :</label>
+                        <input type="text" id="job-id" name="job-id" placeholder="Enter your Job ID">
+                    </div>
+                    <div class="form-control">
+                        <label for="contact-number">Contact Number :</label>
+                        <input type="text" id="contact-number" name="contact-number" placeholder="Enter your Phone Number">
+                    </div>
+                    <div class="form-control">
+                        <label for="full-name">Full Name :</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your Full Name">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email Address :</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email Address">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required placeholder="Enter your Date of Birth">
+                    </div>
+                    <div class="form-control">
+                        <label for="upload">Resume/CV :</label>
+                        <input type="file" id="upload" name="upload"/>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
     <footer class="ftr">
         <p>
             &copy; 2023 CareerBridge. All rights reserved.
