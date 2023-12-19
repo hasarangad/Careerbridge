@@ -90,7 +90,7 @@ if (isset($_POST['applicationSubmit'])) {
                     </div>
                     <div class="form-control">
                         <label for="upload">Resume/CV :</label>
-                        <input type="file" id="upload" name="upload"/>
+                        <input type="file" id="upload" name="upload">
                     </div>
                 </div>
                 <div class="button-container">
