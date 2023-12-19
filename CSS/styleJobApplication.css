@@ -70,24 +70,24 @@ body {
     padding: 17px;
 }
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 800px;
+    margin: 50px auto;
     padding: 20px;
 }
 h1 {
     text-align: center;
-    margin: 20px 0;
-    font-size: 24px;
+    margin: 20px 10px;
+    font-size: 40px;
 }
 .apply-box {
-    background-color: #fff;
+    background-color: #cff9e4;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 .form-container {
-    margin-top: 20px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -97,8 +97,8 @@ h1 {
     flex-direction: column;
 }
 label {
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 input[type="text"],
@@ -109,7 +109,7 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 input:focus,
@@ -119,7 +119,7 @@ textarea:focus {
 
 .button-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -128,8 +128,8 @@ button[type="submit"] {
     border: none;
     padding: 10px 20px;
     color: white;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 20px;
+    font-size: 20px;
     cursor: pointer;
 }
 

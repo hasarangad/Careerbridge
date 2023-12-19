@@ -1,3 +1,45 @@
+<?php
+session_start();
+    
+include 'dbh.inc.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Form has been submitted, process the data
+
+    $job_id = $_POST['job-id'];
+    $contact_number = $_POST['contact-number'];
+    $full_name = $_POST['full-name'];
+    $email = $_POST['email'];
+    $dob = $_POST['dob'];
+    $status = 'pending';
+
+    // Handle file upload
+    $upload_dir = 'uploads/';
+    $file_name = $_FILES['upload']['name'];
+    $file_path = $upload_dir . $file_name;
+
+    if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path)) {
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Insert data into the database
+        $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Application submitted successfully!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    } else {
+        echo "File upload failed.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +69,7 @@
         <div class="apply-box">
             <h1>Apply Now</h1>
 
-            <form action="job_application_submit.php" method="post">
+            <form action="" method="post">
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
