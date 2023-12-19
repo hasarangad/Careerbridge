@@ -3,7 +3,7 @@ session_start();
     
 include 'dbh.inc.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['applicationSubmit'])) {
     // Form has been submitted, process the data
 
     $job_id = $_POST['job-id'];
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $file_name = $_FILES['upload']['name'];
     $file_path = $upload_dir . $file_name;
 
-    if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path)) {
+    if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path.'/'.$file_name)) {
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -29,11 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($conn->query($sql) === TRUE) {
             echo "Application submitted successfully!";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
         }
-
-        $conn->close();
     } else {
         echo "File upload failed.";
     }
@@ -69,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="apply-box">
             <h1>Apply Now</h1>
 
-            <form action="" method="post">
+            <form action="" method="POST">
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
@@ -98,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
                 <div class="button-container">
-                    <button type="submit">Submit</button>
+                    <button type="submit" name="applicationSubmit">Submit</button>
                 </div>
             </form>
             
