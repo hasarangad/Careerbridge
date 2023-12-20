@@ -18,21 +18,25 @@ if (isset($_POST['applicationSubmit'])) {
     $file_name = $_FILES['upload']['name'];
     $file_path = $upload_dir . $file_name;
 
-    if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path.'/'.$file_name)) {
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Insert data into the database
-        $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "Application submitted successfully!";
-        }
-    } else {
-        echo "File upload failed.";
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
+
+    // Insert data into the database
+    $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Application submitted successfully!";
+
+        if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path.'/'.$file_name)) {
+
+        
+        } else {
+            echo "File upload failed.";
+        }
+    }
+
+    
 }
 ?>
 
