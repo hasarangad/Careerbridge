@@ -31,7 +31,7 @@ else{
 
         <div class="navbar">
             <a href="settingS.php">Settings</a>
-            <a href="#">Notification</a>
+            <a href="notificationS.php">Notification</a>
             <a href="#">Company</a>
             <a href="jobPage.php">Find a Job</a>
             <a href="homeS.php">Home</a>
@@ -40,17 +40,17 @@ else{
 
     <div class="container">
         <div class="block1">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href="view_feedback.php"><button>New Feedback and Comments for Application</button></a>    
         </div>
 
         <div class="block2">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href="#"><button>My applyed job</button></a>
         </div>
 
         <div class="block3">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href=""><button>My CVs/Resumes</button></a>
         </div>
     </div>

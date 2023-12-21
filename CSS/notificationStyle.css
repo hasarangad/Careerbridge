@@ -59,18 +59,19 @@ body {
 }
 
 .container {
-    margin-top: 100px;
     width: 100%;
+    height: auto;
+    margin-top: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.block1 {
+.block1, .block2, .block3 {
     position: relative;
-    margin: 30px;
-    width: 400px;
-    height: 320px;
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
     border: 1px solid #aaa;
     border-radius: 20px;
     display: flex;
@@ -78,16 +79,16 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.block1 img {
+.block1 img, .block2 img, .block3 img {
     border: 1px solid #aaa;
     position: absolute;
-    width: 396px;
+    width: 450px;
     height: 250px;
     border: 2px solid black;
     border-radius: 20px;
 }
 
-.block1 a button {
+.block1 a button, .block2 a button, .block3 a button {
     position: absolute;
     top: 260px;
     width: 400px;
@@ -99,71 +100,3 @@ body {
     font-family: Montserrat;
     font-weight: bold;
 }
-
-.block2 {
-    position: relative;
-    margin: 30px;
-    width: 400px;
-    height: 320px;
-    border: 1px solid #aaa;
-    border-radius: 20px;
-    display: flex;
-    background-color: #FFDBB1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.block2 img {
-    border: 1px solid #aaa;
-    position: absolute;
-    width: 396px;
-    height: 250px;
-    border: 2px solid black;
-    border-radius: 20px;
-}
-
-.block2 a button {
-    position: absolute;
-    top: 260px;
-    width: 400px;
-    height: 45px;
-    font-size: 18px;
-    background-color: #FFDBB1;
-    border: none;
-    cursor: pointer;
-    font-family: Montserrat;
-    font-weight: bold;
-}
-
-.block3 {
-    position: relative;
-    margin: 30px;
-    width: 400px;
-    height: 320px;
-    border: 1px solid #aaa;
-    border-radius: 20px;
-    background-color: #FDFFB1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.block3 img {
-    border: 1px solid #aaa;
-    position: absolute;
-    width: 396px;
-    height: 250px;
-    border: 2px solid black;
-    border-radius: 20px;
-}
-
-.block3 a button {
-    position: absolute;
-    top: 260px;
-    width: 400px;
-    height: 45px;
-    font-size: 18px;
-    background-color: #FDFFB1;
-    border: none;
-    cursor: pointer;
-    font-family: Montserrat;
-    font-weight: bold;
-}
-
