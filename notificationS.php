@@ -55,6 +55,12 @@ else{
         </div>
     </div>
 
+    <footer class="ftr">
+        <p>
+            &copy; 2023 CareerBridge. All rights reserved.
+        </p>
+    </footer>
+
 </body>
 </html>
 

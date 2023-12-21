@@ -19,7 +19,7 @@
         </div>
         <div class="navbar">
             <a href="settingS.php">Settings</a>
-            <a href="#">Notification</a>
+            <a href="notificationS.php">Notification</a>
             <a href="#">Company</a>
             <a href="jobPage.php">Find a Job</a>
             <a href="homeS.php">Home</a>

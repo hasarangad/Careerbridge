@@ -58,10 +58,24 @@ body {
     color: black;
 }
 
+.ftr{
+    width: 100%;
+    background-color: #21C87A;
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    height: 60px;
+    justify-content: space-between;
+    padding: 17px;
+    margin-top: 160px;
+}
+
 .container {
     width: 100%;
     height: auto;
-    margin-top: 300px;
+    margin-top: 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
