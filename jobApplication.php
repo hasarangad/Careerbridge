@@ -1,7 +1,9 @@
 <?php
 session_start();
-    
+
 include 'dbh.inc.php';
+
+$uName = $_SESSION['uName'];
 
 if (isset($_POST['applicationSubmit'])) {
     // Form has been submitted, process the data
@@ -28,7 +30,7 @@ if (isset($_POST['applicationSubmit'])) {
         $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Application submitted successfully!";
+            $msg = "Application submitted successfully!";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -69,7 +71,7 @@ if (isset($_POST['applicationSubmit'])) {
         <div class="apply-box">
             <h1>Apply Now</h1>
 
-            <form action="" method="POST" >
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
@@ -93,10 +95,8 @@ if (isset($_POST['applicationSubmit'])) {
                         <input type="date" id="dob" name="dob" required placeholder="Enter your Date of Birth">
                     </div>
                     <div class="form-control">
-                        <form action="" method="post">
                             <label for="upload">Resume/CV :</label>
                             <input type="file" id="upload" name="upload">
-                        </form>
                     </div>
                 </div>
                 <div class="button-container">
