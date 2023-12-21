@@ -13,30 +13,30 @@ if (isset($_POST['applicationSubmit'])) {
     $dob = $_POST['dob'];
     $status = 'pending';
 
-    // Handle file upload
-    // $upload_dir = 'uploads/';
-    // $file_name = $_FILES['upload']['name'];
-    // $file_path = $upload_dir . $file_name;
+    //Handle file upload
+    $upload_dir = 'uploads/';
+    $file_name = $_FILES['upload']['name'];
+    $file_path = $upload_dir . $file_name;
 
-    // if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path)) {
+    if (move_uploaded_file($_FILES['upload']['tmp_name'], $file_path)) {
 
-    //     if ($conn->connect_error) {
-    //         die("Connection failed: " . $conn->connect_error);
-    //     }
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
 
-    //     // Insert data into the database
-    //     $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
+        // Insert data into the database
+        $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
 
-    //     if ($conn->query($sql) === TRUE) {
-    //         echo "Application submitted successfully!";
-    //     } else {
-    //         echo "Error: " . $sql . "<br>" . $conn->error;
-    //     }
+        if ($conn->query($sql) === TRUE) {
+            echo "Application submitted successfully!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
 
-    //     $conn->close();
-    // } else {
-    //     echo "File upload failed.";
-    // }
+        $conn->close();
+    } else {
+        echo "File upload failed.";
+    }
 }
 ?>
 
@@ -69,7 +69,7 @@ if (isset($_POST['applicationSubmit'])) {
         <div class="apply-box">
             <h1>Apply Now</h1>
 
-            <form action="" method="POST">
+            <form action="" method="POST" >
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
@@ -95,29 +95,8 @@ if (isset($_POST['applicationSubmit'])) {
                     <div class="form-control">
                         <form action="" method="post">
                             <label for="upload">Resume/CV :</label>
-                            <!-- <input type="file" id="upload" name="upload"> -->
-                            <input type="File" name="file" value="">
-                            <input type="submit" value="" name="sbt">
-
+                            <input type="file" id="upload" name="upload">
                         </form>
-                        <?php
-                            if(isset($_POST['sbt'])){
-                             
-                            #file name with a random number so that similar dont get replaced
-                            $pname = $uName."-".$_FILES["file"]["name"];
-                        
-                            #temporary file name to store file
-                            $tname = $_FILES["file"]["tmp_name"];
-                            
-                            #upload directory path
-                            $uploads_dir = 'Images/pp';
-                            #TO move the uploaded file to specific location
-                            move_uploaded_file($tname, $uploads_dir.'/'.$pname);
-                        
-                            #sql query to insert into database
-                              
-                        }
-                        ?>
                     </div>
                 </div>
                 <div class="button-container">
