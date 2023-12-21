@@ -104,8 +104,11 @@ body {
 
 .block1 a button, .block2 a button, .block3 a button {
     position: absolute;
-    top: 260px;
+    top: 250px;
     width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     height: 45px;
     font-size: 18px;
     background-color: #B1FFFF;
