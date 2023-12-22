@@ -105,6 +105,7 @@ body {
 .block1 a button, .block2 a button, .block3 a button {
     position: absolute;
     top: 250px;
+    left: 16px;
     width: 400px;
     align-items: center;
     justify-content: center;
@@ -116,4 +117,8 @@ body {
     cursor: pointer;
     font-family: Montserrat;
     font-weight: bold;
+}
+
+.block3 a button{
+    left: 23PX;
 }
