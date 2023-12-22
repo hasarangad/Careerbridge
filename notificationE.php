@@ -30,32 +30,38 @@ else{
         </div>
 
         <div class="navbar">
-            <a href="settingS.php">Settings</a>
-            <a href="notificationS.php">Notification</a>
+            <a href="settingE.php">Settings</a>
+            <a href="notificationE.php">Notification</a>
             <a href="#">Company</a>
             <a href="jobPage.php">Find a Job</a>
-            <a href="homeS.php">Home</a>
-        </div>    
+            <a href="homeE.php">Home</a>
+        </div>     
     </div>
 
     <div class="container">
 
         <div class="block1">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href="#"><button>New Feedback and Comments for Application</button></a>    
         </div>
 
         <div class="block2">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href="my_company_and_post.php"><button>My Company And Post</button></a>
         </div>
 
         <div class="block3">
-            <img src="img/new.jpg" alt="post">
+            <img src="Images/new.jpg" alt="post">
             <a href=""><button>Checking CVs/Resumes</button></a>
         </div>
 
     </div>
+
+    <footer class="ftr">
+        <p>
+            &copy; 2023 CareerBridge. All rights reserved.
+        </p>
+    </footer>
 
 </body>
 </html>
