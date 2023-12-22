@@ -41,7 +41,7 @@ else{
     <div class="container">
         <div class="block1">
             <img src="Images/new.jpg" alt="post">
-            <a href="view_feedback.php"><button>New Feedback and Comments for Application</button></a>    
+            <a href="#"><button>New Feedback and Comments for Application</button></a>    
         </div>
 
         <div class="block2">
@@ -51,7 +51,7 @@ else{
 
         <div class="block3">
             <img src="Images/new.jpg" alt="post">
-            <a href=""><button>My CVs/Resumes</button></a>
+            <a href="#"><button>My CVs/Resumes</button></a>
         </div>
     </div>
 
