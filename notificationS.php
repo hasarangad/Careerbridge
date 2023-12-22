@@ -4,7 +4,7 @@ session_start();
 include 'dbh.inc.php';
 
 if(!isset($_SESSION['uName'])){
-   header('Location: loging.php');
+   header('Location: login.php');
 }
 else{
     $uName = $_SESSION['uName'];
