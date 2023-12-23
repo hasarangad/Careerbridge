@@ -3,6 +3,9 @@
 
     include 'dbh.inc.php';
 
+    $uName = "";
+    $randomNumber = "";
+
     if(isset($_POST['inputSub'])){
         $input = $_POST['input'];
         
@@ -33,13 +36,22 @@
             $header = "From : Career Bridge";
             
             if(mail($to, $sub, $msg, $header)){
-                $emailM = "Check Your Email!";               
+                $emailM = "Check Your Email!";
+                $uName = $input;                           
             }
             else{
                 $emailM = "Enter valid Email";
             }
         }
 
+    }
+
+    if(isset($_POST['confirm'])){
+        $code = $_POST['code'];
+
+        if($randomNumber == $code){
+            echo "True";
+        }
     }
 
 ?>
@@ -98,19 +110,19 @@
     </div>
 
     <script>
-        function showSecondDiv() {
-            // Hide the first div
-            document.getElementById('div1').style.display = 'none';
-            // Show the second div
-            document.getElementById('div2').style.display = 'block';
-        }
+        // function showSecondDiv() {
+        //     // Hide the first div
+        //     document.getElementById('div1').style.display = 'none';
+        //     // Show the second div
+        //     document.getElementById('div2').style.display = 'block';
+        // }
 
-        function showThreeDiv() {
-            // Hide the first div
-            document.getElementById('div2').style.display = 'none';
-            // Show the second div
-            document.getElementById('div3').style.display = 'block';
-        }
+        // function showThreeDiv() {
+        //     // Hide the first div
+        //     document.getElementById('div2').style.display = 'none';
+        //     // Show the second div
+        //     document.getElementById('div3').style.display = 'block';
+        // }
         
     </script>
 </body>
