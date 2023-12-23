@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="div1" class="firstDiv">
-        <form action="" method="post">
+    <form action="" method="post">
             <h2>Forgot Password</h2>
             <div class="inputBox">
                 <div class="inputField">
@@ -22,7 +22,9 @@
                     <i></i>
                 </div>
             </div>
+            <button onclick="showSecondDiv()">Show Second Div</button>
         </form>
+        <button onclick="showSecondDiv()">Show Second Div</button>
     </div>
 
     <div id="div2" class="secondDiv">
@@ -38,6 +40,5 @@
             document.getElementById('div2').style.display = 'block';
         }
     </script>
-  </script>
 </body>
 </html>

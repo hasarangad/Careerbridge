@@ -16,12 +16,19 @@ body{
     min-height: 100vh;
 }
 
-.box{
+#div1{
     position: relative;
-    width: 570px;
-    height: 600px;
+    width: 450px;
+    height: 200px;
     border-radius: 50px 5px;
     overflow: hidden;
+}
+.firstDiv {
+    display: block;
+}
+
+.secondDiv {
+    display: none;
 }
 
 form{

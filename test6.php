@@ -2,25 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Show and Hide Divs</title>
     <style>
-        .container {
-  display: flex;
-}
+        .firstDiv {
+            display: block;
+        }
 
-.box1, .box2 {
-  flex: 1; /* Equal flex distribution, adjust as needed */
-}
-
+        .secondDiv {
+            display: none;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-  <div class="box1">First Div</div>
-  <div class="box2">Second Div</div>
-</div>
+
+    <div id="div1" class="firstDiv">
+        <!-- Content of the first div -->
+        <p>This is the first div.</p>
+        <button onclick="showSecondDiv()">Show Second Div</button>
+    </div>
+
+    <div id="div2" class="secondDiv">
+        <!-- Content of the second div -->
+        <p>This is the second div.</p>
+    </div>
+
+    <script>
+        function showSecondDiv() {
+            // Hide the first div
+            document.getElementById('div1').style.display = 'none';
+            // Show the second div
+            document.getElementById('div2').style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
