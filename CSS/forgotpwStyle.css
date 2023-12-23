@@ -30,6 +30,13 @@ body{
     border-radius: 50px 5px;
     overflow: hidden;
 }
+#div3{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50px 5px;
+    overflow: hidden;
+}
 .firstDiv {
     display: block;
 }
