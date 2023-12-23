@@ -79,7 +79,21 @@
                     <i></i>
                 </div>
             </div>
-            <button type="submit" onclick="showSecondDiv()" name="inputSub">Next</button>           
+            <button type="submit" onclick="showThreeDiv()" name="confirm">Submit</button>           
+        </form>
+    </div>
+
+    <div id="div3" class="thirdDiv">
+        <form action="" method="post">
+            <h2>Forgot Password</h2>
+            <div class="inputBox">
+                <div class="inputField">
+                    <input type="text" name="code" id="" required>
+                    <span>Enter your Verification Code : </span>
+                    <i></i>
+                </div>
+            </div>
+            <button type="submit" onclick="showThreeDiv()" name="confirm">Submit</button>           
         </form>
     </div>
 
@@ -90,12 +104,14 @@
             // Show the second div
             document.getElementById('div2').style.display = 'block';
         }
+
         function showThreeDiv() {
             // Hide the first div
-            document.getElementById('div1').style.display = 'block';
-            // Show the second div
             document.getElementById('div2').style.display = 'none';
+            // Show the second div
+            document.getElementById('div3').style.display = 'block';
         }
+        
     </script>
 </body>
 </html>

@@ -38,6 +38,10 @@ body{
     display: none;
 }
 
+.thirdDiv{
+    display: none;
+}
+
 form{
     position: absolute;
     inset: 2px;
