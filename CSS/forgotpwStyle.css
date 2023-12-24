@@ -42,7 +42,7 @@ body{
 }
 
 .secondDiv {
-    display: none;
+    display: block;
 }
 
 .thirdDiv{

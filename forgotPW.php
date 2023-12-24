@@ -3,9 +3,6 @@
 
     include 'dbh.inc.php';
 
-    $uName = "";
-    $randomNumber = "";
-
     if(isset($_POST['inputSub'])){
         $input = $_POST['input'];
         
@@ -25,20 +22,33 @@
 
             //send Email
             $randomNumber = rand(100000, 999999);
+            $verifyUrl = 'http://localhost/Careerbridge/changePassword.php?code='.$randomNumber;
 
             $to = $row['email'];
-            $sub =  "Verification code to reset your CareerBridge password";
+            $sub =  "Change Your CareerBridge password";
             $msg = "Dear " .$row['fname']. ",
-            \r\n\r\nHere's the verification code to reset your password
-            \r\n\r\nTo reset your password, enter this verification code when prompted:
-            \r\n\r\n
-            \r\n\r\n $randomNumber";
+            \r\nWe hope this message finds you well. Our commitment to your account security is our top priority. As part of our routine security measures, we require all users to periodically update their passwords.
+            \r\nTo ensure the security of your account, we kindly ask you to reset your password by following the link below:
+            \r\n $verifyUrl
+            \r\nPlease note the following guidelines for creating a strong and secure password:
+            \r\n1. Use a combination of uppercase and lowercase letters.
+            \r\n2. Include numbers and special characters.
+            \r\n3. Avoid using easily guessable information, such as your name or birthdate.
+            \r\n4. Do not use the same password across multiple platforms.
+            \r\nIf you have any concerns or questions regarding this password reset process, please don't hesitate to contact our support team at acareerbridge@gmail.com.
+            \r\nThank you for your prompt attention to this matter. We appreciate your cooperation in helping us maintain a secure environment for all our users.
+            \r\nBest regards,
+            \nCareerBridge
+            \nacareerbridge@gmail.com";
+
             $header = "From : Career Bridge";
             
             if(mail($to, $sub, $msg, $header)){
                 $emailM = "Check Your Email!";
-                $uName = $input;
-                echo "<script src='./script/script.js'></script>";                        
+                $uName = mysqli_real_escape_string($conn, $input);
+                $_SESSION['uName'] = mysqli_real_escape_string($conn, $input);
+                $_SESSION['randomNumber'] = $randomNumber;
+                header("Location: login.php");                      
             }
             else{
                 $emailM = "Enter valid Email";
@@ -46,15 +56,6 @@
         }
 
     }
-
-    if(isset($_POST['confirm'])){
-        $code = $_POST['code'];
-
-        if($randomNumber == $code){
-            echo "True";
-        }
-    }
-
 ?>
 
 <!DOCTYPE html>
@@ -77,53 +78,8 @@
                     <i></i>
                 </div>
             </div>
-            <button type="submit" onclick="loadContent()" name="inputSub">Next</button>           
-        </form>
-        
-    </div>
-
-    <div id="div2" class="secondDiv">
-        <form action="" method="post">
-            <h2>Forgot Password</h2>
-            <div class="inputBox">
-                <div class="inputField">
-                    <input type="text" name="code" id="" required>
-                    <span>Enter your Verification Code : </span>
-                    <i></i>
-                </div>
-            </div>
-            <button type="submit" onclick="showThreeDiv()" name="confirm">Submit</button>           
+            <button type="submit" name="inputSub">Next</button>           
         </form>
     </div>
-
-    <div id="div3" class="thirdDiv">
-        <form action="" method="post">
-            <h2>Forgot Password</h2>
-            <div class="inputBox">
-                <div class="inputField">
-                    <input type="text" name="code" id="" required>
-                    <span>Enter your Verification Code : </span>
-                    <i></i>
-                </div>
-            </div>
-            <button type="submit" onclick="showThreeDiv()" name="confirm">Submit</button>           
-        </form>
-    </div>
-
-    <script>
-        // function showSecondDiv() {
-        //     // Hide the first div
-        //     document.getElementById('div1').style.display = 'none';
-        //     // Show the second div
-        //     document.getElementById('div2').style.display = 'block';
-        // }
-
-        // function showThreeDiv() {
-        //     // Hide the first div
-        //     document.getElementById('div2').style.display = 'none';
-        //     // Show the second div
-        //     document.getElementById('div3').style.display = 'block';
-        // }
-    </script>
 </body>
 </html>

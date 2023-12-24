@@ -1,49 +1,51 @@
 <?php
-    session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the updated value from the client
+    $newValue = $_POST["newValue"];
 
-    include 'dbh.inc.php';
+    // Update the PHP variable or perform other server-side actions
+    $phpVariable = $newValue;
 
-    $uName = "";
-    $randomNumber = "";
-
-    if(isset($_POST['inputSub'])){
-        $input = $_POST['input'];
-        
-        $sql = "SELECT * FROM user WHERE userName = ?";
-
-        $stmt = mysqli_stmt_init($conn);
-
-        if(!mysqli_stmt_prepare($stmt, $sql)){
-            $msg = "SQL statement failed!";
-        }
-        else{
-            mysqli_stmt_bind_param($stmt,"s",$input);
-            mysqli_stmt_execute($stmt);
-
-            $result = mysqli_stmt_get_result($stmt);
-            $row = mysqli_fetch_assoc($result);
-
-            //send Email
-            $randomNumber = rand(100000, 999999);
-
-            $to = $row['email'];
-            $sub =  "Verification code to reset your CareerBridge password";
-            $msg = "Dear " .$row['fname']. ",
-            \r\n\r\nHere's the verification code to reset your password
-            \r\n\r\nTo reset your password, enter this verification code when prompted:
-            \r\n\r\n
-            \r\n\r\n $randomNumber";
-            $header = "From : Career Bridge";
-            
-            if(mail($to, $sub, $msg, $header)){
-                $emailM = "Check Your Email!";
-                $uName = $input;                           
-            }
-            else{
-                $emailM = "Enter valid Email";
-            }
-        }
-
-    }
-
+    // Send back a response (optional)
+    echo $phpVariable;
+} else {
+    // Handle other HTTP methods if needed
+    echo "Invalid request method";
+}
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change PHP Variable with User Input</title>
+</head>
+<body>
+
+  <p id="display">Initial PHP Variable Value: <?php echo $phpVariable; ?></p>
+
+  <label for="inputField">Enter new value:</label>
+  <input type="text" id="inputField">
+  <button onclick="updatePHPVariable()">Update PHP Variable</button>
+
+  <script>
+    function updatePHPVariable() {
+      var newValue = document.getElementById('inputField').value;
+
+      // Using AJAX to send the updated value to the server
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "update.php", true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          // Handle the response from the server (if needed)
+          document.getElementById('display').innerHTML = "Updated PHP Variable Value: " + xhr.responseText;
+        }
+      };
+      xhr.send("newValue=" + newValue);
+    }
+  </script>
+
+</body>
+</html>
