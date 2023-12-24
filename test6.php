@@ -1,40 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show and Hide Divs</title>
-    <style>
-        .firstDiv {
-            display: block;
+<?php
+    session_start();
+
+    include 'dbh.inc.php';
+
+    $uName = "";
+    $randomNumber = "";
+
+    if(isset($_POST['inputSub'])){
+        $input = $_POST['input'];
+        
+        $sql = "SELECT * FROM user WHERE userName = ?";
+
+        $stmt = mysqli_stmt_init($conn);
+
+        if(!mysqli_stmt_prepare($stmt, $sql)){
+            $msg = "SQL statement failed!";
+        }
+        else{
+            mysqli_stmt_bind_param($stmt,"s",$input);
+            mysqli_stmt_execute($stmt);
+
+            $result = mysqli_stmt_get_result($stmt);
+            $row = mysqli_fetch_assoc($result);
+
+            //send Email
+            $randomNumber = rand(100000, 999999);
+
+            $to = $row['email'];
+            $sub =  "Verification code to reset your CareerBridge password";
+            $msg = "Dear " .$row['fname']. ",
+            \r\n\r\nHere's the verification code to reset your password
+            \r\n\r\nTo reset your password, enter this verification code when prompted:
+            \r\n\r\n
+            \r\n\r\n $randomNumber";
+            $header = "From : Career Bridge";
+            
+            if(mail($to, $sub, $msg, $header)){
+                $emailM = "Check Your Email!";
+                $uName = $input;                           
+            }
+            else{
+                $emailM = "Enter valid Email";
+            }
         }
 
-        .secondDiv {
-            display: none;
-        }
-    </style>
-</head>
-<body>
+    }
 
-    <div id="div1" class="firstDiv">
-        <!-- Content of the first div -->
-        <p>This is the first div.</p>
-        <button onclick="showSecondDiv()">Show Second Div</button>
-    </div>
-
-    <div id="div2" class="secondDiv">
-        <!-- Content of the second div -->
-        <p>This is the second div.</p>
-    </div>
-
-    <script>
-        function showSecondDiv() {
-            // Hide the first div
-            document.getElementById('div1').style.display = 'none';
-            // Show the second div
-            document.getElementById('div2').style.display = 'block';
-        }
-    </script>
-
-</body>
-</html>
+?>
