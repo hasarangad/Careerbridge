@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: rgb(186, 248, 224);
+    background: linear-gradient(90deg, rgb(150, 238, 197) 0%, rgba(255, 255, 255, 1) 50%, rgb(156, 236, 211) 100%);
+    padding: 10px;
+}
+
+nav {
+    height: 80px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    border-bottom: .5px solid black;
+    font-family: Montserrat;
+    font-weight: bold;
+    width: 100%;
+    z-index: 11;
+}
+
+nav img {
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    border: 0;
+    border-radius: 50%;
+}
+
+nav h1 {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    color: black;
+    left: 85px;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 5px;
+    margin-top: 27px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 60x;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    color: black;
+    font-size: 18px;
+    padding: 22px 15px 30px 15px;
+}
+
+nav ul li a:hover {
+    border-bottom: 4px solid #1ccf7c;
+    color: #1ccf7c;
+}
+
+label #s1,
+label #s2 {
+    font-size: 30px;
+    color: #000;
+    float: right;
+    line-height: 60px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#res-menu {
+    display: none;
+}
+
+.container {
+    margin-top: 90px;
+    width: 800px;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+    left: 0;
+    bottom: 0;
+}
+
+.container .row2 {
+    font-size: 12px;
+    position: relative;
+}
+
+.button input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    padding-left: 15px;
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+    margin-bottom: 10px;
+}
+
+form .button input:hover {
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+}
+
+.clearfix {
+    overflow: auto;
+}

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(186, 248, 224);
+    background: linear-gradient(90deg, rgb(150, 238, 197) 0%, rgba(255, 255, 255, 1) 50%, rgb(156, 236, 211) 100%);
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.popup {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    font-family: Montserrat;
+}
+
+.popup p {
+    margin-bottom: 40px;
+    font-family: Montserrat;
+}
+
+.popup button {
+    width: 300px;
+    height: 30px;
+    background-color: #6FD649;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+    padding: 5px;
+}
+
+.container {
+    margin-top: 90px;
+    width: 1100px;
+    background: #fff;
+    padding: 25px 30px;
+}
+
+.container .title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+    left: 0;
+    bottom: 0;
+}
+
+.container form .userdetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.form .userdetails .inputbox {
+    margin-bottom: 15px;
+}
+
+.userdetails .inputbox .details {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.userdetails .inputbox span {
+    font-weight: bold;
+}
+
+.userdetails .inputbox select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.userdetails .inputbox input {
+    height: 45px;
+    width: 500px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.container .description {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.container .description span {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.container .description textarea {
+    margin: 5px;
+    height: 100px;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+    border-bottom: 2px solid #aaa;
+    transition: all 0.3s ease;
+}
+
+.container .description textarea:focus,
+.container .description textarea:valid {
+    border-color: #2557A7;
+}
+
+.userdetails .inputbox input:focus,
+.userdetails .inputbox input:valid {
+    border-color: #1ccf7c;
+}
+
+.userdetails .block3 select:focus,
+.userdetails .block3 select:valid {
+    border-color: #1ccf7c;
+}
+
+form .button input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    padding-left: 15px;
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+    cursor: pointer;
+}
+
+form .button input:hover {
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+}
+
+.container .btn2 button {
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    padding-left: 15px;
+    background: linear-gradient(135deg, #1ccf7c, #afe4cb);
+    cursor: pointer;
+}
+
+nav {
+    height: 80px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    border-bottom: .5px solid black;
+    font-family: Montserrat;
+    font-weight: bold;
+    width: 100%;
+    z-index: 11;
+}
+
+nav img {
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    border: 0;
+    border-radius: 50%;
+}
+
+nav h1 {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    color: black;
+    left: 85px;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 5px;
+    margin-top: 27px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 60x;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    color: black;
+    font-size: 18px;
+    padding: 22px 15px 30px 15px;
+}
+
+nav ul li a:hover {
+    border-bottom: 4px solid #1ccf7c;
+    color: #1ccf7c;
+}
+
+label #s1,
+label #s2 {
+    font-size: 30px;
+    color: #000;
+    float: right;
+    line-height: 60px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#res-menu {
+    display: none;
+}

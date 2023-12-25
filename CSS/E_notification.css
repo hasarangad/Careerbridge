@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+nav {
+    height: 80px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    border-bottom: .5px solid black;
+    font-family: Montserrat;
+    font-weight: bold;
+    width: 100%;
+    z-index: 11;
+}
+
+nav img {
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    border: 0;
+    border-radius: 50%;
+}
+
+nav h1 {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    color: black;
+    left: 85px;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 5px;
+    margin-top: 27px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 60x;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    color: black;
+    font-size: 18px;
+    padding: 22px 15px 30px 15px;
+}
+
+nav ul li a:hover {
+    border-bottom: 4px solid blue;
+    color: blue;
+}
+
+label #s1,
+label #s2 {
+    font-size: 30px;
+    color: #000;
+    float: right;
+    line-height: 60px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#res-menu {
+    display: none;
+}
+
+.container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block1 {
+    position: relative;
+    margin: 30px;
+    width: 400px;
+    height: 320px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    display: flex;
+    background-color: #B1FFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.block1 img {
+    border: 1px solid #aaa;
+    position: absolute;
+    width: 396px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.block1 a button {
+    position: absolute;
+    top: 260px;
+    width: 400px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #B1FFFF;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.block2 {
+    position: relative;
+    margin: 30px;
+    width: 400px;
+    height: 320px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    display: flex;
+    background-color: #FFDBB1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.block2 img {
+    border: 1px solid #aaa;
+    position: absolute;
+    width: 396px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.block2 a button {
+    position: absolute;
+    top: 260px;
+    width: 400px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #FFDBB1;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.block3 {
+    position: relative;
+    margin: 30px;
+    width: 400px;
+    height: 320px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    background-color: #FDFFB1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.block3 img {
+    border: 1px solid #aaa;
+    position: absolute;
+    width: 396px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.block3 a button {
+    position: absolute;
+    top: 260px;
+    width: 400px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #FDFFB1;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+
+/* Responsive */
+
+@media(max-width:1050px) {
+    /* Navigation */
+    label #s1 {
+        display: block;
+        margin-top: 10px;
+    }
+    nav ul {
+        position: fixed;
+        width: 75%;
+        height: 100vh;
+        background-color: black;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 10;
+    }
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 16px;
+        color: white;
+    }
+    nav ul li a:hover {
+        border: 0;
+    }
+    /* For Responsive State */
+    #res-menu:checked~ul {
+        left: 0;
+    }
+    #res-menu:checked~label #s1 {
+        display: none;
+    }
+    #res-menu:checked~label #s2 {
+        display: block;
+    }
+    /* Banner */
+    .banner-text h2 {
+        font-size: 40px;
+    }
+}

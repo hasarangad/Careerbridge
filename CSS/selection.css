@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1c1c1c;
+}
+
+.rapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 180px;
+}
+
+.rapper .title {
+    color: white;
+    font-size: 25px;
+    letter-spacing: .2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rapper .img {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.rapper .img img {
+    width: 150px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.rapper .btn {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rapper .btn .yes button {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(33, 200, 122, 0.6);
+    border: 1px solid rgba(33, 200, 122, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 30px;
+}
+
+.rapper .btn .no button {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(33, 200, 122, 0.6);
+    border: 1px solid rgba(33, 200, 122, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 30px;
+}
+
+.rapper .btn .yes button:hover {
+    color: #21C87A;
+    background-color: white;
+    font-weight: bold;
+}
+
+.rapper .btn .no button:hover {
+    color: #21C87A;
+    background-color: white;
+    font-weight: bold;
+}
