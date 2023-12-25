@@ -13,7 +13,7 @@
 
 	if (isset($_POST['submit'])) {
 		// submitt button is clicked
-		$id = $_SESSION['user_id'];
+		$id = $_SESSION['uName'];
 		$company= $_POST['company'];
 		$location =$_POST['location'];
 		$employee= $_POST['employee'];
@@ -31,7 +31,7 @@
 		// checking comapny_name is same
 		$query = "SELECT * FROM company WHERE company_name ='{$company}'";
 
-		$re =mysqli_query($connection,$query);
+		$re =mysqli_query($conn,$query);
 
 		if(mysqli_num_rows($re)>0){
 			$errors[] = 'Company name is already taken';
@@ -39,7 +39,7 @@
 
 		$query = "SELECT * FROM company WHERE email ='{$email}'";
 
-		$re =mysqli_query($connection,$query);
+		$re =mysqli_query($conn,$query);
 
 		if(mysqli_num_rows($re)>0){
 			$errors[] = 'email is already taken';
@@ -62,8 +62,8 @@
 
 			$file_uploaded = move_uploaded_file($temp_name, $upload_to . $file_name);
 
-			$sql = "INSERT INTO company(company_name,company_logo,location,employe,description,email,industry,id) VALUES ('$company','$file_name','$location','$employee','$description','$email','$industry','$id')";
-			$result = mysqli_query($connection,$sql);
+			$sql = "INSERT INTO company(company_name,company_logo,location,employe,description,email,industry,userName) VALUES ('$company','$file_name','$location','$employee','$description','$email','$industry','$id')";
+			$result = mysqli_query($conn,$sql);
 			$hide = 2;
 			$value= '   <div class="popup">
 							<img src="img/tick.png" alt="tick">
@@ -81,26 +81,12 @@
 	<meta charset="UTF-8">
 	<title>Add Company</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="css/add company.css">
+	<link rel="stylesheet" href="CSS/add company.css">
 </head>
 <body>
 
-	<nav>
-        <input type="checkbox" id="res-menu">
-        <label for="res-menu">
-            <i class="fas fa-bars" id="s1"></i>
-            <i class="fas fa-times" id="s2"></i>
-        </label>
-        <img src="img/Logo.png" alt="logo">
-        <h1>CareerBridge</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="find_job_E">Job</a></li>
-            <li><a href="view_companies_E.php">Company</a></li>
-            <li><a href="notification_E.php">Notifications</a></li>
-            <li><a href="setting_E.php">Settings</a></li>
-            <ul>
-    </nav>
+        <?php include 'navBar.php';?>
+        <!-- Navigation -->
 
 <?php if(!isset($hide)) { ?>
 
