@@ -10,7 +10,7 @@
     <div class="rapper">
     
         <div class="img">
-            <img src="./Img/Logo.png" alt="Logo">
+            <img src="./Images/Logo.png" alt="Logo">
         </div>
     
         <div class="title">
