@@ -26,7 +26,7 @@
 		$temp_name = $_FILES['image']['tmp_name'];
 
 
-		$upload_to = 'images/';
+		$upload_to = 'companyLogo/';
 
 		// checking comapny_name is same
 		$query = "SELECT * FROM company WHERE company_name ='{$company}'";
@@ -47,7 +47,7 @@
 
 		//checking the file type
 		if ($file_type != 'image/png') {
-			if($file_type != 'image/jpeg'){
+			if($file_type != 'image/jpg'){
 				$errors[] = 'Only JPEG or PNG files are allowed.';
 			}
 		}
