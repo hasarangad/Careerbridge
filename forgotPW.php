@@ -5,7 +5,7 @@
 
     if(isset($_POST['inputSub'])){
         $input = $_POST['input'];
-        
+        $uName = mysqli_real_escape_string($conn, $input);
         $sql = "SELECT * FROM user WHERE userName = ?";
 
         $stmt = mysqli_stmt_init($conn);
@@ -22,7 +22,7 @@
 
             //send Email
             $randomNumber = rand(100000, 999999);
-            $verifyUrl = 'http://localhost/Careerbridge/changePassword.php?code='.$randomNumber;
+            $verifyUrl = 'http://localhost/Careerbridge/verifyF.php?code='.$randomNumber.'?userName='.$uName;
 
             $to = $row['email'];
             $sub =  "Change Your CareerBridge password";
@@ -44,10 +44,9 @@
             $header = "From : Career Bridge";
             
             if(mail($to, $sub, $msg, $header)){
-                $emailM = "Check Your Email!";
-                $uName = mysqli_real_escape_string($conn, $input);
-                $_SESSION['uName'] = mysqli_real_escape_string($conn, $input);
-                $_SESSION['randomNumber'] = $randomNumber;
+                $emailM = "Check Your Email!";                
+                $sql1 = "UPDATE user SET fCode = '$randomNumber' WHERE userName = '$uName' LIMIT 1";
+                mysqli_query($conn, $sql1);
                 header("Location: login.php");                      
             }
             else{
