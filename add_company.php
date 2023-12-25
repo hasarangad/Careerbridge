@@ -47,7 +47,7 @@
 
 		//checking the file type
 		if ($file_type != 'image/png') {
-			if($file_type != 'image/jpg'){
+			if($file_type != 'image/jpeg'){
 				$errors[] = 'Only JPEG or PNG files are allowed.';
 			}
 		}
