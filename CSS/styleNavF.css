@@ -76,3 +76,37 @@ body {
     justify-content: space-between;
     padding: 17px;
 }
+.footer{
+    background-color: rgba(33, 200, 122, 0.5);
+    padding: 30px;
+    margin-top: 75px;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img{
+    width: 50px;
+    height: auto;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.image h1{
+    color: #ffffff;
+    font-size: 30px;
+}
+.socialicons{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socialicons a{
+    padding-right: 20px;
+}
+.socialicons p{
+    color: #fff;
+    padding-right: 25px;
+    font-size: 20px;
+}

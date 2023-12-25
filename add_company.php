@@ -163,36 +163,11 @@
     </div>
 </div>
 
-    <!--footer -->
-
-    <div class="block">
-        <div class="block1">
-            <div class="contact">
-                <p>Conatact And Follow Us</p>
-            </div>
-            <div class="item">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="description">
-                <p>YOUR PATH TO PROFESSIONAL SUCCESS !!!</p>
-            </div>
-        </div>
-        <div class="block2">
-            <p>Copyright <i class="fa-regular fa-copyright"></i>2023 CareerBridge Designed by Prototype-Nexus</p>
-        </div>
-    </div>
-
     <?php } ?>
 	    <?php
     	    echo $value ;
 	    ?>
-
+    <?php include 'footer.php';?>
 </body>
 </html>
 
