@@ -229,7 +229,7 @@ label #s2 {
     background-color: #fff;
     border-radius: 6px;
     border: 1px solid #aaa;
-    position: absolute;
+    /* position: absolute; */
     top: 90px;
     left: 50%;
     transform: translate(-50%, 50%);
