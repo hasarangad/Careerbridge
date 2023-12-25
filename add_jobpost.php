@@ -1,12 +1,12 @@
 <?php 
-	include ('php/connection.php');
+	include 'dbh.inc.php';
     session_start();
 
-    $id = $_SESSION['user_id'];
+    $id = $_SESSION['uName'];
 
     $value ='';
     $query = "SELECT com_id, company_name FROM company";
-    $result_set = mysqli_query($connection,$query);
+    $result_set = mysqli_query($conn,$query);
     $list = '';
     while($row = mysqli_fetch_assoc($result_set)){
     $list .= "<option value=\"{$row['com_id']}\">{$row['company_name']}</option>";
@@ -27,21 +27,21 @@
 		$qulification = $_POST['mini_qulification'];
 
         $sql1 ="SELECT * FROM company WHERE com_id ={$company_name}";
-        $res = mysqli_query($connection,$sql1);
+        $res = mysqli_query($conn,$sql1);
         $value ='';
             while($rows =mysqli_fetch_assoc($res)){
                   $value = $rows['company_name'];
             }   
         
-        $sql = "INSERT INTO job(com_id,job_title,job_type,job_location,job_category,monthly_Salary,qulification,sort_description,long_description,company_name,id) VALUES ('$company_name','$job_title','$job_type','$job_location','$job_category','$salary','$qulification','$sort_description','$long_description','$value','$id')";
+        $sql = "INSERT INTO job(com_id,job_title,job_type,job_location,job_category,monthly_Salary,qulification,sort_description,long_description,company_name,userName) VALUES ('$company_name','$job_title','$job_type','$job_location','$job_category','$salary','$qulification','$sort_description','$long_description','$value','$id')";
 
-        $result = mysqli_query($connection,$sql);
+        $result = mysqli_query($conn,$sql);
         $hide = 2;
         $value= '   <div class="popup">
                         <img src="img/tick.png" alt="tick">
                         <h2>Thank You!</h2>
                         <p>Your job post have been successfully added. Thanks!</p>
-                        <a href="find_job_E.php"><button>Back to find job page</button></a>
+                        <a href="jobPage.php"><button>Back to find job page</button></a>
                     </div>';
 		
 	}
@@ -145,7 +145,7 @@
         </form>
         
         <div class="btn2">
-                <a href="find_job_E.php">
+                <a href="jobPage.php">
                     <button name="cancel">cancel</button>
                 </a>
         </div>
