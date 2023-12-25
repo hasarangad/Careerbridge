@@ -66,7 +66,7 @@
 			$result = mysqli_query($conn,$sql);
 			$hide = 2;
 			$value= '   <div class="popup">
-							<img src="img/tick.png" alt="tick">
+							<img src="Images/tick.png" alt="tick">
 							<h2>Thank You!</h2>
 							<p>Your company has been successfully added. Thanks!</p>
 							<a href="view_companies_E.php"><button>Back to campany page</button></a>

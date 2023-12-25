@@ -229,7 +229,7 @@ label #s2 {
     background-color: #fff;
     border-radius: 6px;
     border: 1px solid #aaa;
-    /* position: absolute; */
+    position: absolute;
     top: 90px;
     left: 50%;
     transform: translate(-50%, 50%);
@@ -267,6 +267,7 @@ label #s2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     color: #333;
     padding: 5px;
+    margin-bottom: auto;
 }
 
 
