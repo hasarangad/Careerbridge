@@ -162,12 +162,12 @@
 
     </div>
 </div>
-
+<?php include 'footer.php';?>
     <?php } ?>
 	    <?php
     	    echo $value ;
 	    ?>
-    <?php include 'footer.php';?>
+    
 </body>
 </html>
 
