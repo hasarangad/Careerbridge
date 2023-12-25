@@ -25,23 +25,8 @@
 
 </head>
 <body>
+        <?php include 'navBar.php';?>
         <!-- Navigation -->
-        <nav>
-        <input type="checkbox" id="res-menu">
-        <label for="res-menu">
-            <i class="fas fa-bars" id="s1"></i>
-            <i class="fas fa-times" id="s2"></i>
-        </label>
-        <img src="img/Logo.png" alt="logo">
-        <h1>CareerBridge</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="find_job_E.php">Find Job</a></li>
-            <li><a href="view_companies_E.php">Company</a></li>
-            <li><a href="notification_E.php">Notifications</a></li>
-            <li><a href="setting_E">Settings</a></li>
-            <ul>
-    </nav>
     
 <div class="rapper">
 
@@ -95,7 +80,7 @@
     </div>
 
 </div>
-
+<?php include 'footer.php';?>
     
 </body>
 </html>
