@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/myApplicationStyle.css">
 </head>
 <body>
-    <?php include 'navBar.php';?>
+    <?php include 'navBarS.php';?>
     <div class="container">
         <?php
         if(mysqli_stmt_prepare($stmt, $sql)){
