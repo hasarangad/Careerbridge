@@ -48,7 +48,12 @@
                 $applicationId = $row['application_id'];
         ?>        
         
-        <h1>Application for j<?php echo $row['job_id'];?>  </h1>
+        <h1>Application For Job ID <?php echo $row['job_id'];?>  </h1>
+        <div class="inlinecontent">
+            <h3>Job ID : </h3>
+            <p><?php echo $row['job_id'];?></p>
+        </div>
+
         <div class="inlinecontent">
             <h3>Full Name : </h3>
             <p><?php echo $row['full_name'];?></p>

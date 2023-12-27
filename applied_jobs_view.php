@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 include 'dbh.inc.php';
@@ -42,7 +41,7 @@ $stmt = mysqli_stmt_init($conn);
         ?>        
         
         <div class="box">
-            <h3>Application for j<?php echo $row['job_id'];?> : </h3>
+            <h3>Application for job id <?php echo $row['job_id'];?> : </h3>
             <div class="button">
                 <a href="viewApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Read CV" name="rCv"></a>
                 <a href="updateApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Update CV" name="uCv"></a>
