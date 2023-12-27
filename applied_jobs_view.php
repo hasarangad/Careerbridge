@@ -4,7 +4,14 @@ session_start();
 
 include 'dbh.inc.php';
 
-$uName = $_SESSION['uName'];
+$uName;
+if(!isset($_SESSION["uName"])){
+    header('Location: login.php');  
+}
+else{
+    $uName = $_SESSION['uName'];
+}
+
 
 $sql = "SELECT * FROM job_applications WHERE userName = ?";
 
