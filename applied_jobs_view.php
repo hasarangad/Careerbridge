@@ -31,12 +31,13 @@ $stmt = mysqli_stmt_init($conn);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             while($row = mysqli_fetch_assoc($result)){
+                $applicationId = $row['application_id'];
         ?>        
         
         <div class="box">
             <h3>Application for j<?php echo $row['job_id'];?> : </h3>
             <form action="" method="post" class="button">
-                <input type="submit" value="Read CV" name="rCv">
+                <a href="viewApplication.php"><input type="submit" value="Read CV" name="rCv"></a>
                 <input type="submit" value="Update CV" name="uCv">
                 <input type="submit" value="Delete CV" name="dCv">
             </form>
@@ -45,7 +46,6 @@ $stmt = mysqli_stmt_init($conn);
             }
         }?>
     </div>
-    
     <?php include 'footer.php';?>
 </body>
 </html>
