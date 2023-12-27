@@ -165,20 +165,7 @@ if(isset($_POST['off'])){
     <link rel="stylesheet" type="text/css" href="./CSS/settingSStyle.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="./Images/Logo.png" alt="Logo">
-            <a href="">CareerBridge</a>
-        </div>
-
-        <div class="navbar">
-            <a href="settingS.php">Settings</a>
-            <a href="#">Notification</a>
-            <a href="#">Company</a>
-            <a href="jobPage.php">Find a Job</a>
-            <a href="homeS.php">Home</a>
-        </div>    
-    </div>
+    <?php include 'navBarS.php';?>
 
     <div class="container">
         <div class="userDetails">
@@ -336,11 +323,7 @@ if(isset($_POST['off'])){
  
     
 
-    <footer class="ftr">
-        <p>
-            &copy; 2023 CareerBridge. All rights reserved.
-        </p>
-    </footer>
+    <?php include 'footer.php';?>
 </body>
 </html>
  
