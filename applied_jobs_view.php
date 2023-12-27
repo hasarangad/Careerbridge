@@ -28,7 +28,7 @@ $stmt = mysqli_stmt_init($conn);
     <link rel="stylesheet" type="text/css" href="CSS/myApplicationStyle.css">
 </head>
 <body>
-    <?php include 'navBar.php';?>
+    <?php include 'navBarS.php';?>
     <div class="container">
         <h1>My Applications</h1>
         <?php
