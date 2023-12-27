@@ -25,7 +25,7 @@
 
 </head>
 <body>
-        <?php include 'navBar.php';?>
+        <?php include 'navBarS.php';?>
         <!-- Navigation -->
     
 <div class="rapper">

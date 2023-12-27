@@ -16,7 +16,7 @@
             <a href="settingE.php">Settings</a>
             <a href="notificationE.php">Notification</a>
             <a href="#">Company</a>
-            <a href="jobPage.php">Find a Job</a>
+            <a href="jobPageE.php">Find a Job</a>
             <a href="homeE.php">Home</a>
         </div> 
         
