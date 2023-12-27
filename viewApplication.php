@@ -15,7 +15,7 @@
         $uName = $_SESSION['uName'];
     }
     
-    //check id is set or not
+    //check application id is set or not
     if(isset($_GET['id'])){
         $applicationId = mysqli_real_escape_string($conn, $_GET['id']);
     }
