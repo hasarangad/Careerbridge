@@ -58,8 +58,27 @@
             <h3>Full Name : </h3>
             <p><?php echo $row['full_name'];?></p>
         </div>
+
+        <div class="inlinecontent">
+            <h3>Contact Number : </h3>
+            <p><?php echo $row['contact_number'];?></p>
+        </div>
         
-        
+        <div class="inlinecontent">
+            <h3>Email Address : </h3>
+            <p><?php echo $row['email'];?></p>
+        </div>
+
+        <div class="inlinecontent">
+            <h3>Date of birth : </h3>
+            <p><?php echo $row['dob'];?></p>
+        </div>
+
+        <div class="inlinecontent">
+            <h3>Status : </h3>
+            <p><?php echo $row['status'];?></p>
+        </div>
+
         <?php
             }
         }?>
