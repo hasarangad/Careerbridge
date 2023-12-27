@@ -60,18 +60,17 @@
                 <input type="text" name="lName" id="" value="<?php echo $row['contact_number']?>">
             </div>
 
-            <div class="inlinecontent">
+            <div class="inlinecontentC">
                 <h3>Email Address : </h3>
                 <input type="text" name="lName" id="" value="<?php echo $row['email']?>">
             </div>
 
-            <div class="inlinecontent">
+            <div class="inlinecontentC">
                 <h3>Date of birth : </h3>
                 <input type="text" name="lName" id="" value="<?php echo $row['dob']?>">
-                <p><?php echo $row['dob'];?></p>
             </div>
 
-            <div class="inlinecontent">
+            <div class="inlinecontentC">
                 <h3>Change CV : </h3>
                 <input type="File" name="file" value="">
             </div>

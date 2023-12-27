@@ -63,7 +63,7 @@ h1{
     border-color: #D32828;
     color: white;
 }
-.inlinecontent{
+.inlinecontent, .inlinecontentC{
     padding: 10px;
     padding-left: 30px;
     margin-left: 30px;
@@ -77,4 +77,18 @@ h1{
     font-size: 35px;
     display: inline;
     margin-right: 10px;
+}
+.inlinecontentC h3{
+    font-size: 35px;
+    display: inline;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.inlinecontentC input{
+    font-size: 35px;
+    display: inline;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 70%;
 }
