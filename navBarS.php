@@ -17,7 +17,7 @@
             <a href="notificationS.php">Notification</a>
             <a href="#">Company</a>
             <a href="jobPageS.php">Find a Job</a>
-            <a href="homeES.php">Home</a>
+            <a href="homeS.php">Home</a>
         </div>
         
     </nav>
