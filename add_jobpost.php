@@ -1,8 +1,17 @@
 <?php 
-	include 'dbh.inc.php';
-    session_start();
+	session_start();
 
-    $id = $_SESSION['uName'];
+    include 'dbh.inc.php';
+    
+    $uName;
+    if(!isset($_SESSION["uName"])){
+        header('Location: login.php');  
+    }
+    else{
+        $id = $_SESSION['uName'];
+    }
+
+    
 
     $value ='';
     $query = "SELECT com_id, company_name FROM company";
