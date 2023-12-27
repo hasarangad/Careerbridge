@@ -34,7 +34,12 @@ $stmt = mysqli_stmt_init($conn);
         ?>        
         
         <div class="box">
-            <h3>Application for j<?php echo $row['job_id'];?></h3>
+            <h3>Application for j<?php echo $row['job_id'];?> : </h3>
+            <form action="" method="post" class="button">
+                <input type="submit" value="Read CV" name="rCv">
+                <input type="submit" value="Update CV" name="uCv">
+                <input type="submit" value="Delete CV" name="dCv">
+            </form>
         </div>
         <?php
             }

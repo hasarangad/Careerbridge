@@ -12,10 +12,50 @@ h1{
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #B1FFFF;
+    border-radius: 30px;
 }
 .box{
     background-color: #EFFBCC;
     margin: auto;
     width: 80%;
     margin-top: 30px;
+}
+.box h3{
+    padding: 10px;
+    padding-left: 20px;
+}
+.button{
+    text-align: center;
+    padding: 10px;
+}
+.box input[type="submit"]{
+    /* background-color: #14A49B;
+    border-color: #14A49B; */
+    border-radius: 10px;
+    height: 35px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 110px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.box input[name="rCv"]{
+    background-color: #428718;
+    border-color: #428718;
+    color: white;
+    margin-right: 200px;
+}
+
+.box input[name="uCv"]{
+    background-color: #1551C7;
+    border-color: #1551C7;
+    color: white;
+    margin-right: 200px;
+}
+
+.box input[name="dCv"]{
+    background-color: #D32828;
+    border-color: #D32828;
+    color: white;
 }
