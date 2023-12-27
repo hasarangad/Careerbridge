@@ -2,6 +2,7 @@ h1{
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-size: 60px;
 }
 .container{
     width: 80%;
@@ -59,4 +60,19 @@ h1{
     background-color: #D32828;
     border-color: #D32828;
     color: white;
+}
+.inlinecontent{
+    padding-left: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.inlinecontent h3{
+    font-size: 35px;
+    display: inline;
+    margin-right: 10px;
+}
+.inlinecontent p{
+    font-size: 35px;
+    display: inline;
+    margin-right: 10px;
 }
