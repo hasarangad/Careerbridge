@@ -1,10 +1,21 @@
 h1{
-    margin-top: 40px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: aquamarine;
 }
 .container{
-    color: burlywood;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #B1FFFF;
+}
+.box{
+    background-color: #EFFBCC;
+    margin: auto;
+    width: 80%;
+    margin-top: 30px;
 }
