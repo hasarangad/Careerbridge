@@ -38,8 +38,8 @@ $stmt = mysqli_stmt_init($conn);
             <h3>Application for j<?php echo $row['job_id'];?> : </h3>
             <div class="button">
                 <a href="viewApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Read CV" name="rCv"></a>
-                <a href="viewApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Update CV" name="uCv"></a>
-                <a href="viewApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Delete CV" name="dCv"></a>
+                <a href="updateApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Update CV" name="uCv"></a>
+                <a href="deleteApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Delete CV" name="dCv"></a>
             </div>
         </div>
         <?php
