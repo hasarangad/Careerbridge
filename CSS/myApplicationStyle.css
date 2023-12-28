@@ -68,6 +68,7 @@ h1{
     padding-left: 30px;
     margin-left: 30px;
 }
+
 .inlinecontent h3{
     font-size: 35px;
     display: inline;
@@ -79,14 +80,14 @@ h1{
     margin-right: 10px;
 }
 .inlinecontentC h3{
-    font-size: 35px;
+    font-size: 30px;
     display: inline;
     margin-right: 10px;
     margin-top: 5px;
 }
 
 .inlinecontentC input{
-    font-size: 35px;
+    font-size: 30px;
     display: inline;
     margin-right: 10px;
     margin-top: 5px;
@@ -97,14 +98,15 @@ h1{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
-    
+    margin-top: 7px;  
 }
 
-.btn input[type="submit"]{
-    margin-right: 60px;
+input[name="update"]{
+    display: inline;
     width: 150px;
     height: 40px;
+    margin-top: 8px;
+    margin-left: 495px;
     background-color: #D32828;
     color: white;
     border-radius: 15px;
@@ -113,6 +115,7 @@ h1{
 }
 
 button{
+    display: inline;
     width: 150px;
     height: 40px;
     background-color: #1551C7;
@@ -120,4 +123,8 @@ button{
     border-radius: 15px;
     border-color: #1551C7;
     font-size: 25px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
 }

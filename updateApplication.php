@@ -75,14 +75,14 @@
                 <input type="File" name="file" value="">                
             </div>
             
-            <div class="btn">
-                <input type="submit" value="Update" name="update">
-                <a href="applied_jobs_view.php"><button>Cancel</button></a>
-                             
-            </div>
+            <input type="submit" value="Update" name="update">
+
+            
             
         </form>
-
+        <div class="btn">
+                <a href="applied_jobs_view.php"><button>Go Back</button></a>                             
+        </div>
         <?php
             }
         }?>
