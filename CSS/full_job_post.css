@@ -7,16 +7,11 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
     background: rgb(186, 248, 224);
     background: linear-gradient(90deg, rgb(150, 238, 197) 0%, rgba(255, 255, 255, 1) 50%, rgb(156, 236, 211) 100%);
-    padding: 10px;
 }
 
-nav {
+/* nav {
     height: 80px;
     background-color: #fff;
     position: fixed;
@@ -91,10 +86,10 @@ label #s2 {
 
 #res-menu {
     display: none;
-}
+} */
 
 .container {
-    margin-top: 90px;
+    margin-top: 20px;
     width: 800px;
     background: #fff;
     padding: 20px 25px;
@@ -102,14 +97,14 @@ label #s2 {
 }
 
 .container .title {
-    font-size: 25px;
+    font-size: 50px;
     font-weight: 500;
-    position: relative;
+    /* position: relative; */
 }
 
 .container .title::before {
     content: '';
-    position: absolute;
+    /* position: absolute; */
     height: 3px;
     width: 30px;
     background: linear-gradient(135deg, #1ccf7c, #afe4cb);
@@ -118,8 +113,8 @@ label #s2 {
 }
 
 .container .row2 {
-    font-size: 12px;
-    position: relative;
+    font-size: 20px;
+    /* position: relative; */
 }
 
 .button input {
@@ -129,7 +124,7 @@ label #s2 {
     cursor: pointer;
     color: #fff;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 200;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -145,4 +140,10 @@ form .button input:hover {
 
 .clearfix {
     overflow: auto;
+}
+
+.rapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

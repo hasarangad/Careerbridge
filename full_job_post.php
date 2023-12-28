@@ -26,19 +26,10 @@
     <link rel="stylesheet" href="css/full_job_post.css">
     <title>Job post</title>
 </head>
-    <nav>
-        <img src="img/Logo.png" alt="logo">
-        <h1>CareerBridge</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="find_job_E.php">Find Job</a></li>
-            <li><a href="view_companies_E.php">Company</a></li>
-            <li><a href="notification_E.php">Notifications</a></li>
-            <li><a href="setting_E.php">Settings</a></li>
-        <ul>
-    </nav>
+    
 
 <body>
+    <?php include 'navBarS.php';?>
     <div class="rapper">
         
         <div class="main">
@@ -61,7 +52,8 @@
         </div>
 
     </div>
-
+    
+    <?php include 'footer.php';?>
 </body>
 
 </html>

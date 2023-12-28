@@ -2,90 +2,13 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-nav {
-    height: 80px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    border-bottom: .5px solid black;
     font-family: Montserrat;
-    font-weight: bold;
-    width: 100%;
-    z-index: 11;
-}
-
-nav img {
-    position: absolute;
-    top: 10px;
-    width: 60px;
-    height: 60px;
-    left: 20px;
-    border: 0;
-    border-radius: 50%;
-}
-
-nav h1 {
-    position: absolute;
-    width: 200px;
-    top: 0;
-    color: black;
-    left: 85px;
-    font-weight: 900;
-    margin-top: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 2px 2px 2px #aaa;
-}
-
-nav ul {
-    float: right;
-    margin-right: 5px;
-    margin-top: 27px;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    line-height: 60x;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    padding: 5px 0;
-    color: black;
-    font-size: 18px;
-    padding: 22px 15px 30px 15px;
-}
-
-nav ul li a:hover {
-    border-bottom: 4px solid blue;
-    color: blue;
-}
-
-label #s1,
-label #s2 {
-    font-size: 30 px;
-    color: #000;
-    float: right;
-    line-height: 60px;
-    margin-right: 30px;
-    cursor: pointer;
-    display: none;
-}
-
-#res-menu {
-    display: none;
 }
 
 .rapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 90px;
 }
 
 .main-caption {
@@ -112,36 +35,50 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.search form input {
+.search .form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search .form .input input {
     width: 800px;
     border: 1px solid #aaa;
-    border-radius: 5px;
-    height: 45px;
-    padding: 10px;
+    border-radius: 8px;
+    height: 55px;
     font-size: 20px;
-    box-shadow: 2px 2px 2px #aaa;
-    font-family: Montserrat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: bolder;
     outline: none;
+    padding: 10px;
+    margin-right: 15px;
 }
 
-.search form button {
+.search .form .btn button {
     width: 300px;
+    padding: 10px;
     height: 55px;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #aaa;
+    border: 1px solid #21C87A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
-    background-color: #2557A7;
+    background-color: #21C87A;
     font-weight: bold;
-    font-family: Montserrat;
-    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
     font-size: 20px;
-    text-shadow: 2px 2px 2px #aaa;
+    text-shadow: 2px 2px 2px #2557A7;
     cursor: pointer;
+}
+
+.search .form .btn button:hover {
+    background-color: #fff;
+    color: #21C87A;
 }
 
 .main {
@@ -164,13 +101,12 @@ h3 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     font-family: Montserrat;
-    z-index: 9;
     background: rgb(249, 238, 212);
     background: linear-gradient(90deg, rgba(249, 238, 212, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(249, 238, 212, 1) 100%);
 }
 
 .container:hover {
-    transform: translateY(-5px);
+    transform: translateY(10px);
     transition: all ease 0.3s;
 }
 
@@ -202,12 +138,19 @@ h3 {
     height: 35px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #2557A7;
+    background-color: #21C87A;
     color: white;
     font-weight: bold;
     font-size: 16px;
-    border: 0;
+    border: 1px solid #21C87A;
     border-radius: 5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.container .row1 .culom2 button:hover {
+    background-color: #fff;
+    color: #2557A7;
 }
 
 .container .row2 {
@@ -306,195 +249,67 @@ h3 {
 }
 
 .rate {
-    position: relative;
-    width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 5px 5px 5px;
 }
 
 .rate .rating {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid #eee;
-    height: 65px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 5px;
-    font-family: Montserrat;
-    position: relative;
-    z-index: 9;
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: #eee;
 }
 
-.rate .rating strong {
+.rate .rating .title strong {
     font-size: 25px;
-    font-weight: bold;
-    font-family: Montserrat;
-    float: left;
-    margin-top: 15px;
-    margin-left: 10px;
-    letter-spacing: .3em;
-    color: #2557A7;
-    text-transform: capitalize;
-}
-
-.rate .rating p {
-    margin-top: 5px;
-    margin-left: 10px;
-    float: left;
-    font-size: 40px;
-    color: #FFD700;
-}
-
-.rate button {
-    position: absolute;
-    top: 15px;
-    left: 1150px;
-    width: 230px;
-    height: 45px;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: white;
-    font-size: 18px;
-    font-family: Montserrat;
-    text-align: center;
+    text-transform: uppercase;
     letter-spacing: .2em;
-    background-color: #2557A7;
-    text-align: center;
-    font-weight: bolder;
-    z-index: 10;
-    cursor: pointer;
+    padding: 5px;
 }
 
-.rate button i {
-    float: left;
-    margin-left: 20px;
-    margin-top: 2px;
+.rate .rating .star p {
+    font-size: 25px;
+    color: #FFD700;
+    padding: 5px;
+    letter-spacing: .2em;
 }
 
-.rate button p {
-    float: left;
-    margin-left: 10px;
-    text-align: center;
+.rate .rating .star p i:hover {
+    color: #000;
+    transform: translateY(-5px);
+    transition: all ease 0.3s;
+}
+
+.rate .btn button {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    border: 1px solid #21C87A;
+    border-radius: 8px;
+    background-color: #21C87A;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+}
+
+.rate .btn button:hover {
+    background-color: #fff;
+    color: #21C87A;
 }
 
 .line {
     width: 100%;
     border-bottom: 1px solid #2557A7;
-}
-
-
-/*footer*/
-
-.block {
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Montserrat;
-}
-
-.block .block1 {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    background-color: #D0D1CE;
-    height: 110px;
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.block .block1 .contact {
-    position: absolute;
-    color: #2557A7;
-    font-weight: bold;
-}
-
-.block .block1 ul {
-    margin-top: 40px;
-}
-
-.block .block1 ul li {
-    display: inline;
-    border: 4px solid #fff;
-    border-radius: 50%;
-    padding: 10px;
-    margin-left: 10px;
-}
-
-.block .block1 .description {
-    margin-top: 25px;
-    color: #2557A7;
-    font-weight: bold;
-}
-
-.block .block2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    height: 40px;
-    background: #eee;
-    color: #2557A7;
-}
-
-.block .block2 p {
-    margin-left: 20px;
-    padding: 10px;
-    font-weight: 600;
-}
-
-
-/* Responsive */
-
-@media(max-width:1050px) {
-    /* Navigation */
-    label #s1 {
-        display: block;
-        margin-top: 10px;
-    }
-    nav ul {
-        position: fixed;
-        width: 75%;
-        height: 100vh;
-        background-color: black;
-        top: 50px;
-        left: -100%;
-        text-align: center;
-        transition: 0.5s;
-        z-index: 10;
-    }
-    nav ul li {
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-    }
-    nav ul li a {
-        font-size: 16px;
-        color: white;
-    }
-    nav ul li a:hover {
-        border: 0;
-    }
-    /* For Responsive State */
-    #res-menu:checked~ul {
-        left: 0;
-    }
-    #res-menu:checked~label #s1 {
-        display: none;
-    }
-    #res-menu:checked~label #s2 {
-        display: block;
-    }
-    /* Banner */
-    .banner-text h2 {
-        font-size: 40px;
-    }
 }

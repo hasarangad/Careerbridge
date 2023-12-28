@@ -15,7 +15,7 @@
         <div class="navbar">
             <a href="settingS.php">Settings</a>
             <a href="notificationS.php">Notification</a>
-            <a href="#">Company</a>
+            <a href="view_companies_S.php">Company</a>
             <a href="jobPageS.php">Find a Job</a>
             <a href="homeS.php">Home</a>
         </div>
