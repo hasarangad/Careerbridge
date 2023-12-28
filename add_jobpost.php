@@ -50,7 +50,7 @@
                         <img src="img/tick.png" alt="tick">
                         <h2>Thank You!</h2>
                         <p>Your job post have been successfully added. Thanks!</p>
-                        <a href="jobPage.php"><button>Back to find job page</button></a>
+                        <a href="jobPageE.php"><button>Back to find job page</button></a>
                     </div>';
 		
 	}
@@ -70,22 +70,22 @@
     
     <title>Job post</title>
 </head>
-    <nav>
-
-        <img src="img/Logo.png" alt="logo">
-        <h1>CareerBridge</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="find_job_E.php">Find Job</a></li>
-            <li><a href="view_companies_E.php">Company</a></li>
-            <li><a href="notification_E.php">Notifications</a></li>
-            <li><a href="setting_E.php">Settings</a></li>
-        <ul>
-            
-    </nav>
-
-
 <body>
+
+<nav>
+
+<img src="Images/Logo.png" alt="logo">
+<h1>CareerBridge</h1>
+<ul>
+    <li><a href="homeE.php">Home</a></li>
+    <li><a href="jobPageE.php">Find a Job</a></li>
+    <li><a href="#">Company</a></li>
+    <li><a href="notificationE.php">Notification</a></li>
+    <li><a href="settingE.php">Settings</a></li>
+<ul>
+    
+</nav> 
+
 <?php if(!isset($hide)) { ?>
     <div class="container">
         <div class="title">Add job post</div>
