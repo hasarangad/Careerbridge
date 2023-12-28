@@ -105,7 +105,7 @@
             $sql = "UPDATE job_applications SET full_name='$fullName',contact_number='$contact',email='$email',dob='$dob',resume_path='$file_path' WHERE application_id='$applicationId'";
  
             if(mysqli_query($conn,$sql)){
-        
+                header("Location: viewApplication.php?id=$applicationId");
             }
             else{
                 echo "Error";
