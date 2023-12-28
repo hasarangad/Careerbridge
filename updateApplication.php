@@ -75,13 +75,21 @@
                 <input type="File" name="file" value="">                
             </div>
             
-            <input type="submit" value="Update" name="update">
+            <div class="inlinecontentC">
+                <input type="submit" value="Update" name="update">
+                <div class="btn">
+                    <a href="applied_jobs_view.php"><button>Cancel</button></a>
+                </div>               
+            </div>
+            
         </form>
 
         <?php
             }
         }?>
     </div>
+
+
     <?php
         if(isset($_POST['update'])){
             $fullName = mysqli_real_escape_string($conn, $_POST['fullName']);
@@ -112,6 +120,8 @@
             }
         }   
     ?>
+
+
     <?php include 'footer.php';?>
 </body>
 </html>
