@@ -97,16 +97,18 @@ h1{
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
+    
 }
 
-input[type="submit"]{
-    
+.btn input[type="submit"]{
+    margin-right: 60px;
     width: 150px;
     height: 40px;
-    background-color: #1551C7;
+    background-color: #D32828;
     color: white;
     border-radius: 15px;
-    border-color: #1551C7;
+    border-color: #D32828;
     font-size: 25px;
 }
 
