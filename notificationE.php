@@ -43,7 +43,11 @@ else{
 
     </div>
 
-    <?php include 'footer.php';?>
+    <footer class="ftr">
+        <p>
+            &copy; 2023 CareerBridge. All rights reserved.
+        </p>
+    </footer>
 
 </body>
 </html>
