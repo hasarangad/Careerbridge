@@ -70,14 +70,14 @@
         <?php
             //job search
             if(isset($_GET['search'])){
-                $search = mysqli_real_escape_string($connection,$_GET['search']);
+                $search = mysqli_real_escape_string($conn,$_GET['search']);
                 $sql ="SELECT * FROM company WHERE (company_name LIKE '%{$search}%') ORDER BY company_name ";
             }
             else{
                 $sql ="SELECT * FROM company";
             }
     
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result)>0){
                 while($rows =mysqli_fetch_assoc($result)){
