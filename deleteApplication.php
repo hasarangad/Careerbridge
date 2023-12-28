@@ -21,6 +21,10 @@
 
     if(isset($_POST['yes'])){
         $sql ="DELETE FROM job_applications WHERE application_id = '$applicationId'";
+
+        if(mysqli_query($conn,$sql)){
+            header("Location: applied_jobs_view.php");
+        }
     }
 ?>
 
