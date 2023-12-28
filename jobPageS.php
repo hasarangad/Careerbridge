@@ -41,7 +41,7 @@
     </div>
 
     <div class="search">
-        <form action="find_job_E.php" method="get">
+        <form action="jobPageS.php" method="get">
             <input type="text" name="search" id="" placeholder="Enter the job Title" autofocus>
             <button type ="submit" name ="submit">Find the job</button>
         </form>
@@ -70,14 +70,14 @@
 
     </div>
     
-    <div class="rate">
+    <!-- <div class="rate">
         <a href= "com_selection.php">
             <button type="submit" name="submit">
                 <i class="fa-solid fa-plus"></i>
                 <p>Add job post<p>
             </button>
         </a>
-    </div>
+    </div> -->
 
 </div>
 <?php include 'footer.php';?>
