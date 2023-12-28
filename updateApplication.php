@@ -75,11 +75,10 @@
                 <input type="File" name="file" value="">                
             </div>
             
-            <div class="inlinecontentC">
+            <div class="btn">
                 <input type="submit" value="Update" name="update">
-                <div class="btn">
-                    <a href="applied_jobs_view.php"><button>Cancel</button></a>
-                </div>               
+                <a href="applied_jobs_view.php"><button>Cancel</button></a>
+                             
             </div>
             
         </form>
