@@ -9,11 +9,13 @@ function job_update($row,$job_title,$company_name,$job_catagory,$location,$sort_
             <div class=\"title\">
                 <h2>$job_title</h2>
             </div>
-            <div class=\"update\">
-                <a href=\"jobpost_update.php?id={$row}\"><button>update</button></a>
-            </div>
-            <div class=\"delete\">
-                <a href=\"delete_post.php?id={$row}\"><button>delete</button></a>
+            <div class=\"btn\">
+                <div class=\"update\">
+                    <a href=\"jobpost_update.php?id={$row}\"><button>update</button></a>
+                </div>
+                <div class=\"delete\">
+                    <a href=\"delete_post.php?id={$row}\"><button>delete</button></a>
+                </div>
             </div>
         </div>
         <div class=\"block\">
@@ -37,5 +39,6 @@ function job_update($row,$job_title,$company_name,$job_catagory,$location,$sort_
     </div>"
 ;
 echo $elemnt;}
+
 
 ?>
