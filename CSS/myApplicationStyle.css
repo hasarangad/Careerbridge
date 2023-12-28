@@ -92,11 +92,24 @@ h1{
     margin-top: 5px;
     width: 70%;
 }
+
 .btn{
     text-align: center;
     align-items: center;
     justify-content: center;
 }
+
+input[type="submit"]{
+    
+    width: 150px;
+    height: 40px;
+    background-color: #1551C7;
+    color: white;
+    border-radius: 15px;
+    border-color: #1551C7;
+    font-size: 25px;
+}
+
 button{
     width: 150px;
     height: 40px;
