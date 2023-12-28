@@ -78,8 +78,11 @@
             <h3>Status : </h3>
             <p><?php echo $row['status'];?></p>
         </div>
+
+        <div class="btn">
+            <a href="applied_jobs_view.php"><button>Go Back</button></a>
+        </div>
         
-        <a href="applied_jobs_view.php"><button>Go Back</button></a>
         <?php
             }
         }?>
