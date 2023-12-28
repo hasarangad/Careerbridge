@@ -49,7 +49,7 @@
         ?>        
         
         <h1>Application For Job ID <?php echo $row['job_id'];?>  </h1>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <div class="inlinecontentC">
                 <h3>Full Name : </h3>
                 <input type="text" name="lName" id="" value="<?php echo $row['full_name']?>">
@@ -72,7 +72,7 @@
 
             <div class="inlinecontentC">
                 <h3>Change CV : </h3>
-                <input type="File" name="file" value="">
+                <input type="File" name="file" value="">                
             </div>
 
         </form>

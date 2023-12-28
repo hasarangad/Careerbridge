@@ -33,7 +33,7 @@ else{
 
         <div class="block2">
             <img src="Images/new.jpg" alt="post">
-            <a href="#"><button>My applyed job</button></a>
+            <a href="#"><button>My applied jobs</button></a>
         </div>
 
         <div class="block3">
