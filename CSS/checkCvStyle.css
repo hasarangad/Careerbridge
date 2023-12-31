@@ -50,11 +50,13 @@ h1{
     color: white;
 }
 
-.box input[name="dCv"]{
-    background-color: #D32828;
-    border-color: #D32828;
+.box input[name="download"]{
+    background-color: #1551C7;
+    border-color: #1551C7;
     color: white;
 }
+
+
 .inlinecontent, .inlinecontentC{
     padding: 10px;
     padding-left: 30px;
