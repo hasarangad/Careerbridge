@@ -6,7 +6,7 @@
 <body>
 
 <h2>Download File from HERE : </h2>
-<a href="newPhp.php?file=Images/1.jpg">click HERE</a>
+<a href="newPhp.php?file=pdfone.pdf">click HERE</a>
 
 
 
