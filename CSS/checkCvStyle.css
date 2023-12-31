@@ -6,6 +6,16 @@ h1{
     margin-bottom: 20px;
     color: purple;
 }
+button{
+    display: inline;
+    width: 180px;
+    height: 35px;
+    background-color: #1551C7;
+    color: white;
+    border-radius: 15px;
+    border-color: #1551C7;
+    font-size: 20px;
+}
 .container{
     width: 75%;
     justify-content: center;
@@ -73,16 +83,7 @@ h1{
     color: white;
 }
 
-button{
-    display: inline;
-    width: 180px;
-    height: 35px;
-    background-color: #1551C7;
-    color: white;
-    border-radius: 15px;
-    border-color: #1551C7;
-    font-size: 20px;
-}
+
 a{
     text-decoration: none;
 }

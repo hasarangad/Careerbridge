@@ -80,16 +80,28 @@
                     <label><a href="downloadingCV.php?file=<?php echo $row['resume_path']?>"><button>Download CV</button></a></label>
                     <br>
                     <br>
-                
+
+                    <form action="" method="post">
+                        <label><b>Status : </b></label>
+                        <select name="status" id="">
+                            <option value="">None</option>
+                            <option value="">Accepted</option>
+                            <option value="">Declined</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div class="button">
+                            <input type="submit" value="Update Status" name="updateCV">
+                        </div>
+                    </form>
+                    
         <!-- </div> -->
         <?php
             }
         }
         ?>
     </div>
-    <div class="button">
-    <a href="updateCV.php?id=<?php echo $applicationId;?>"><input type="submit" value="Full Details" name="fullCV"></a>
-    </div>
+    
 
 
     <?php include 'footer.php';?>
@@ -116,6 +128,9 @@
             }
         }
 
+        if(isset($_POST['updateCV'])){
+            echo "Yes";
+        }
     ?>
 
 </body>
