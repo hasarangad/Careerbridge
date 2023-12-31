@@ -21,8 +21,9 @@ h1{
     background-color: #EFFBCC;
     margin: auto;
     width: 80%;
-    margin-top: 30px;
+    margin-top: 40px;
     border-radius: 20px;
+    padding: 10px;
 }
 .box h3{
     padding: 10px;
@@ -43,81 +44,56 @@ h1{
     margin-right: 5px;
     text-align: center;
 }
-
+.button input[type="submit"]{
+    /* background-color: #14A49B;
+    border-color: #14A49B; */
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 180px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 25px;
+}
 .box input[name="fullCV"]{
     background-color: #1551C7;
     border-color: #1551C7;
     color: white;
 }
 
+.button input[name="updateCV"]{
+    background-color: #D32828;
+    border-color: #D32828;
+    color: white;
+}
 .box input[name="download"]{
     background-color: #1551C7;
     border-color: #1551C7;
     color: white;
 }
 
-
-.inlinecontent, .inlinecontentC{
-    padding: 10px;
-    padding-left: 30px;
-    margin-left: 30px;
-}
-
-.inlinecontent h3{
-    font-size: 35px;
-    display: inline;
-    margin-right: 10px;
-}
-.inlinecontent p{
-    font-size: 35px;
-    display: inline;
-    margin-right: 10px;
-}
-.inlinecontentC h3{
-    font-size: 30px;
-    display: inline;
-    margin-right: 10px;
-    margin-top: 5px;
-}
-
-.inlinecontentC input{
-    font-size: 30px;
-    display: inline;
-    margin-right: 10px;
-    margin-top: 5px;
-    width: 70%;
-}
-
-.btn{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 7px;  
-}
-
-input[name="update"]{
-    display: inline;
-    width: 150px;
-    height: 40px;
-    margin-top: 8px;
-    margin-left: 495px;
-    background-color: #D32828;
-    color: white;
-    border-radius: 15px;
-    border-color: #D32828;
-    font-size: 25px;
-}
-
 button{
     display: inline;
-    width: 150px;
-    height: 40px;
+    width: 180px;
+    height: 35px;
     background-color: #1551C7;
     color: white;
     border-radius: 15px;
     border-color: #1551C7;
-    font-size: 25px;
+    font-size: 20px;
 }
 a{
     text-decoration: none;
+}
+label{
+    width: 80%;
+    align-items: left;
+    text-align: left;
+    margin-top: 0;
+    font-size: 35px;
+}
+b{
+    font-size: 35px;
+    padding-left: 20%;
 }

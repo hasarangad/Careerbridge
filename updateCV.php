@@ -80,16 +80,16 @@
                     <label><a href="downloadingCV.php?file=<?php echo $row['resume_path']?>"><button>Download CV</button></a></label>
                     <br>
                     <br>
-                    <div class="button">
-                        <a href="updateCV.php?id=<?php echo $applicationId;?>"><input type="submit" value="Update Status" name="updateCV"></a>
-                    </div>
+                
         <!-- </div> -->
         <?php
             }
         }
         ?>
     </div>
-    
+    <div class="button">
+    <a href="updateCV.php?id=<?php echo $applicationId;?>"><input type="submit" value="Full Details" name="fullCV"></a>
+    </div>
 
 
     <?php include 'footer.php';?>
