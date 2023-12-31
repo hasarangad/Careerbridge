@@ -12,7 +12,7 @@
         $uName = $_SESSION['uName'];
     }
 
-    $sql = "SELECT * FROM job_applications WHERE userName = ?";
+    $sql = "SELECT * FROM job WHERE userName = ?";
 
     $stmt = mysqli_stmt_init($conn);
 ?>
@@ -24,6 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checking CV</title>
+    <link rel="stylesheet" type="text/css" href="CSS/checkCVStyle.css">
 </head>
 <body>
 <?php include 'navBarS.php';?>
@@ -35,20 +36,32 @@
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             while($row = mysqli_fetch_assoc($result)){
-                $applicationId = $row['application_id'];
+                $jobID = $row['job_id'];
+
+                $sql1 = "SELECT * FROM job_applications WHERE job_id = ?";
+                $stmt1 = mysqli_stmt_init($conn);
+                if(mysqli_stmt_prepare($stmt1, $sql1)){
+                    mysqli_stmt_bind_param($stmt1,"s", $jobID);
+                    mysqli_stmt_execute($stmt1);
+                    $result1 = mysqli_stmt_get_result($stmt1);
+                    while($row = mysqli_fetch_assoc($result1)){
+
         ?>        
         
         <div class="box">
-            <h3>Application for job id <?php echo $row['job_id'];?> : </h3>
-            <div class="button">
+            <h3>CV / Resume for job id <?php echo $row['job_id'];?> : </h3>
+            <!-- <div class="button">
                 <a href="viewApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Read CV" name="rCv"></a>
                 <a href="updateApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Update CV" name="uCv"></a>
                 <a href="deleteApplication.php?id=<?php echo $applicationId;?>"><input type="submit" value="Delete CV" name="dCv"></a>
-            </div>
+            </div> -->
         </div>
         <?php
+                    }
+                }
             }
-        }?>
+        }
+        ?>
     </div>
     <?php include 'footer.php';?>
 
