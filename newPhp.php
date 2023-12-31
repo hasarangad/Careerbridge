@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-color: black;
-            color: white;
-            margin: auto;
-            align-items: center;
-
-        }
-        input{
-            width:20%;
-
-        }
-    </style>
+	<title>Download File using PHP</title>
 </head>
 <body>
-    <form action="" method="post">
-        <label for="fName">Full Name : </label>
-        <input type="text" name="" id=""><br>
 
-        <label for="">DOB :</label>
-        <input type="date" name="" id=""><br>
+<h2>Download File from HERE : </h2>
+<a href="newPhp.php?file=Images/1.jpg">click HERE</a>
 
-        <label for="">Email :</label>
-        <input type="text" name="" id=""><br>
 
-        <input type="submit" value="Submit">
-    </form>
+
 </body>
 </html>
+
+<?php 
+if(!empty($_GET['file']))
+{
+	$filename = basename($_GET['file']);
+	// $filepath = './Images/' . $filename;
+	// if(!empty($filename) && file_exists($filepath)){
+
+//Define Headers
+		// header("Cache-Control: public");
+		// header("Content-Description: FIle Transfer");
+		header("Content-Disposition: attachment; filename=" .$filename);
+		// header("Content-Type: application/zip");
+		// header("Content-Transfer-Encoding: binary");
+
+		readfile($filepath);
+		exit;
+
+	// }
+	// else{
+	// 	echo "This File Does not exist.";
+	// }
+}
+
+ ?>
