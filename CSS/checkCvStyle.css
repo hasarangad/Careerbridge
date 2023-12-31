@@ -44,18 +44,10 @@ h1{
     text-align: center;
 }
 
-.box input[name="rCv"]{
-    background-color: #428718;
-    border-color: #428718;
-    color: white;
-    margin-right: 200px;
-}
-
-.box input[name="uCv"]{
+.box input[name="fullCV"]{
     background-color: #1551C7;
     border-color: #1551C7;
     color: white;
-    margin-right: 200px;
 }
 
 .box input[name="dCv"]{
