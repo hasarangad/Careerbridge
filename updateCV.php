@@ -93,7 +93,7 @@
                     <form action="" method="post">
                         <label><b>Status : </b></label>
                         <select name="status" id="">
-                            <option value="none">None</option>
+                            <option value="pending">Pending</option>
                             <option value="accepted">Accepted</option>
                             <option value="declined">Declined</option>
                         </select>
