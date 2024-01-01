@@ -21,6 +21,53 @@
     else{
         header("Location: createInterview.php");
     }
+
+    if(isset($_POST['submit'])){
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $date = mysqli_real_escape_string($conn, $_POST['date']);
+        $time = mysqli_real_escape_string($conn, $_POST['time']);
+
+        $sql = "INSERT INTO interviews(application_id, email, `date`, `time`) VALUES ('$applicationId', '$email', '$date', '$time')";
+        if(mysqli_query($conn, $sql)){
+            
+            $sql1 = "SELECT * FROM job_applications WHERE application_id = ?";
+
+            $stmt = mysqli_stmt_init($conn);
+
+            if(mysqli_stmt_prepare($stmt, $sql1)){
+                mysqli_stmt_bind_param($stmt,"s", $applicationId);
+                $run = mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+                while($row = mysqli_fetch_assoc($result)){
+                    $sEmail = $row['email'];
+                    $sub =  "Online Interview Confirmation.";
+                    $msg = "Dear " .$row['full_name']. ",
+                    \r\nCongratulations! Your application for the position associated with Job ID:". $row['job_id']. " has been successful, and we would like to invite you for an online interview.
+                    \r\nInterview Details:
+                    \nDate : ".$date ."
+                    \nTime : ".$time ."
+                    \nPlatform : Zoom
+                    \r\nPlease expect to receive the Zoom link 30 minutes before the scheduled interview time. If this time is inconvenient or you encounter any issues, please let us know immediately.
+                    \r\nWe look forward to connecting with you virtually and discussing your potential contribution to our team.
+                    \r\nIf you have any questions or concerns, feel free to contact me at ".$email.".
+                    \r\nBest regards,\r\nAdmin Career Bridge\r\nCareerbridge Team\r\n";
+
+                    $header = "From : Career Bridge";                
+                    if($run == TRUE){
+                        if(mail($sEmail, $sub, $msg, $header)){
+                            $emailM = "Check Your Email!";
+                            header("Location: createInterview.php");
+                            
+                        }
+                        else{
+                            $emailM = "Enter valid Email";
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
