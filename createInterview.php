@@ -51,7 +51,7 @@
         <div class="box">
             <h3>New CV / Resume for job id <?php echo $row1['job_id'];?> by <?php echo $row1['full_name'];?> : </h3>
             <div class="button">
-                <a href="viewCV.php?id=<?php echo $applicationId;?>"><input type="submit" value="Full Details" name="fullCV"></a>
+                <a href="interviewForm.php?id=<?php echo $applicationId;?>"><input type="submit" value="Create" name="fullCV"></a>
             </div>
         </div>
         <?php
