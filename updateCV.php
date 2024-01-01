@@ -114,7 +114,7 @@
     </div>
     
     <div class="interview">
-        <button>Create a Interview</button>
+        <button><a href="createInterview.php">Create a Interview</a></button>
     </div>
 
     <?php include 'footer.php';?>

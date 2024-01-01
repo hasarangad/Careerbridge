@@ -90,7 +90,9 @@
         ?>
     </div>
     
-
+    <div class="interview">
+        <button><a href="createInterview.php">Create a Interview</a></button>
+    </div>
 
     <?php include 'footer.php';?>
     <?php 
