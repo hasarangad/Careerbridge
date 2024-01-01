@@ -21,6 +21,15 @@
     else{
         header("Location: checkCV.php");
     }
+    //update cv
+    if(isset($_POST['updateCV'])){
+        $status = $_POST['status'];
+        $sqlU = "UPDATE job_applications SET `status`= '$status' WHERE application_id ='$applicationId'";
+        if(mysqli_query($conn, $sqlU)){
+            header("Location: checkCV.php");
+        }
+    }
+
 
     $sql = "SELECT * FROM job_applications WHERE application_id = ?";
 
@@ -84,15 +93,17 @@
                     <form action="" method="post">
                         <label><b>Status : </b></label>
                         <select name="status" id="">
-                            <option value="">None</option>
-                            <option value="">Accepted</option>
-                            <option value="">Declined</option>
+                            <option value="none">None</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="declined">Declined</option>
                         </select>
                         <br>
                         <br>
                         <div class="button">
-                            <input type="submit" value="Update Status" name="updateCV">
+                        <input type="submit" value="Update Status" name="updateCV">
                         </div>
+                            
+                        
                     </form>
                     
         <!-- </div> -->
@@ -128,9 +139,7 @@
             }
         }
 
-        if(isset($_POST['updateCV'])){
-            echo "Yes";
-        }
+        
     ?>
 
 </body>

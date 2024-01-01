@@ -38,7 +38,7 @@
             while($row = mysqli_fetch_assoc($result)){
                 $jobID = $row['job_id'];
 
-                $sql1 = "SELECT * FROM job_applications WHERE job_id = ?";
+                $sql1 = "SELECT * FROM job_applications WHERE job_id = ? AND status='pending'";
                 $stmt1 = mysqli_stmt_init($conn);
                 if(mysqli_stmt_prepare($stmt1, $sql1)){
                     mysqli_stmt_bind_param($stmt1,"s", $jobID);
