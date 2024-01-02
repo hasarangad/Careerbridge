@@ -81,7 +81,7 @@
                     <br>
                     
                     <label><b>User Name : </b></label>
-                    <label><?php echo $row['userName'];?></label>
+                    <label><a href="profileS.php?userName=<?php echo $row['userName'];?>"><?php echo $row['userName'];?></a></label>
                     <br>
                     <br>    
                     

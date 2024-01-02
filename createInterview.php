@@ -49,7 +49,7 @@
         ?>        
         
         <div class="box">
-            <h3>New CV / Resume for job id <?php echo $row1['job_id'];?> by <?php echo $row1['full_name'];?> : </h3>
+            <h3>New CV / Resume for job id <?php echo $row1['job_id'];?> by <a href="profileS.php?userName=<?php echo $row1['userName'];?>"><?php echo $row1['full_name'];?></a> : </h3>
             <div class="button">
                 <a href="interviewForm.php?id=<?php echo $applicationId;?>"><input type="submit" value="Create" name="fullCV"></a>
             </div>
