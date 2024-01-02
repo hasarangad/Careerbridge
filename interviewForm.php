@@ -76,23 +76,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/interviewStyle.css">
 </head>
 <body>
-    <form action="" method="post">
-        <label for="">Enter your contact email : </label>
-        <input type="text" name="email" id="">
-        <br>
+    <div class="container">
+        <form action="" method="post">
+            <label for="">Enter your contact email : </label>
+            <input type="text" name="email" id="">
+            <br>
 
-        <label for="">Date : </label>
-        <input type="date" name="date" id="">
-        <br>
+            <label for="">Date : </label>
+            <input type="date" name="date" id="">
+            <br>
 
-        <label for="">Time : </label>
-        <input type="time" name="time" id="">
-        <br>
+            <label for="">Time : </label>
+            <input type="time" name="time" id="">
+            <br>
 
-        <input type="submit" value="Submit" name="submit">
-        
-    </form>
+            <input type="submit" value="Submit" name="submit">
+            
+        </form>
+    </div>
+    
 </body>
 </html>
