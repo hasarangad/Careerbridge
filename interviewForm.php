@@ -79,6 +79,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/interviewStyle.css">
 </head>
 <body>
+    <?php include 'navBar.php';?>
     <div class="container">
         <form action="" method="post">
             <label for="">Enter your contact email : </label>

@@ -46,7 +46,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/checkCVStyle.css">
 </head>
 <body>
-<?php include 'navBarS.php';?>
+<?php include 'navBar.php';?>
     <div class="container">
         <?php
         if(mysqli_stmt_prepare($stmt, $sql)){
