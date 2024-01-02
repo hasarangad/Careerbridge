@@ -1,16 +1,19 @@
 <?php 
-	include ('php/connection.php');
+	include ('dbh.inc.php');
 	session_start();
-
-	if(!isset($_SESSION['user_id'])){
+    $uName;
+	if(!isset($_SESSION['uName'])){
 		header('Location: loging.php');
 	}
+    else{
+        $uName=$_SESSION['uName'];
+    }
 
     $id = $_GET['id'];
 
     $sql ="SELECT * FROM company WHERE com_id = {$id}";
 
-    $result_set = mysqli_query($connection,$sql);
+    $result_set = mysqli_query($conn,$sql);
 
     $value = '';
     $value1 ='';
@@ -44,11 +47,11 @@
 
     
         $sql = "UPDATE company set company_name = '$company' , location = '$location' , employe = '$employee' , email = '$email' , industry = '$industry' , description = '$description' WHERE com_id ='$id' ";
-        $result = mysqli_query($connection,$sql);
+        $result = mysqli_query($conn,$sql);
 
         $hide = 2;
         $value= '   <div class="popup">
-                        <img src="img/tick.png" alt="tick">
+                        <img src="Images/tick.png" alt="tick">
                         <h2>Update Successfully!</h2>
                         <p>Your details has been successfully updated. Thanks!</p>
                         <a href="view_companies_E.php"><button>Back to campany page</button></a>
@@ -62,8 +65,7 @@
 	<meta charset="UTF-8">
 	<title>Update Company</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="css/add company.css">
-    <link rel="stylesheet" href="styleNavF.css">
+	<link rel="stylesheet" href="CSS/add company.css">
 
 </head>
 <body>
@@ -149,8 +151,3 @@
 
 </body>
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
-
