@@ -81,16 +81,17 @@
 <body>
     <?php include 'navBar.php';?>
     <div class="container">
+        <h1>Create A Interview</h1>
         <form action="" method="post">
             <label for="">Enter your contact email : </label>
             <input type="text" name="email" id="">
             <br>
 
-            <label for="">Date : </label>
+            <label for="">Interview Date : </label>
             <input type="date" name="date" id="">
             <br>
 
-            <label for="">Time : </label>
+            <label for="">Interview Time : </label>
             <input type="time" name="time" id="">
             <br>
 
