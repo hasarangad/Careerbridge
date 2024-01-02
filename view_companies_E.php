@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'dbh.inc.php';
-    include './php/elements_S.php';
+    include './php/elements_E.php';
     
     if(!isset($_SESSION['uName'])){
         header('Location: login.php');

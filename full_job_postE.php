@@ -29,7 +29,7 @@
     
 
 <body>
-    <?php include 'navBarS.php';?>
+    <?php include 'navBar.php';?>
     <div class="rapper">
         
         <div class="main">
