@@ -38,7 +38,7 @@ else{
 
         <div class="block3">
             <img src="Images/new.jpg" alt="post">
-            <a href="#"><button>Checking CVs/Resumes</button></a>
+            <a href="checkCV.php"><button>Checking CVs/Resumes</button></a>
         </div>
 
     </div>
