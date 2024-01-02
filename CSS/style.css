@@ -116,8 +116,9 @@ h3 {
 }
 
 .container .row1 .culom1 .logo img {
-    width: 70px;
+    width: 120px;
     height: 70px;
+    border-radius: 0px;
 }
 
 .container .row1 .culom2 {
