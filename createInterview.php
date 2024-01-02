@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/checkCVStyle.css">
 </head>
 <body>
-<?php include 'navBarS.php';?>
+<?php include 'navBar.php';?>
     <div class="container">
         <h1>CHECKING CVs / RESUMES</h1>
         <?php
