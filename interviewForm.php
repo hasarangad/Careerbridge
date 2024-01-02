@@ -94,8 +94,10 @@
             <label for="">Interview Time : </label>
             <input type="time" name="time" id="">
             <br>
-
-            <input type="submit" value="Submit" name="submit">
+            <div class="btn">
+                <input type="submit" value="Submit" name="submit">
+            </div>
+            
             
         </form>
     </div>

@@ -3,10 +3,10 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 160px;
     margin-bottom: 300px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     border-radius: 30px;
     background-color: bisque;
 }
@@ -33,7 +33,28 @@ form{
 }
 .container label{
     font-size: 25px;
+    padding-left: 70px;
 }
 .container input[type="text"]{
     margin-left: 30px;
+}
+.container input[type="date"]{
+    margin-left: 127px;
+}
+.container input[type="time"]{
+    margin-left: 123px;
+}
+.container input[type="submit"]{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    margin-left: 123px;
+    width: 300px;
+    margin-top: 10px;
+}
+.btn{
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    margin-top: 20px;
 }
