@@ -15,7 +15,7 @@
     <div class="header">
         <div class="logo">
             <img src="./Images/Logo.png" alt="Logo">
-            <a href="#">CareerBridge</a>
+            <a href="homeG.php">CareerBridge</a>
         </div>
         <div class="navbar">
             <a href="selection.php">SignUp</a>
