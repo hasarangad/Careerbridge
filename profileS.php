@@ -64,7 +64,7 @@
         </div>
 
         <div class="settings">
-            <a href="">Go Back</a>
+            <a href="checkCV.php"><button>Go Back</button></a>
         </div>
     </div>
 
