@@ -1,7 +1,9 @@
 <?php
 
-function elements($row,$company_name,$job_title,$job_location,$job_category,$monthly_Salary,$sort_description){
-    $elemnt =
+function elements($id,$row,$company_name,$job_title,$job_location,$job_category,$monthly_Salary,$sort_description,$firstname,$lastname){
+   
+   
+    $elemnt = 
 
     "
 <div class=\"container\">
@@ -41,6 +43,10 @@ function elements($row,$company_name,$job_title,$job_location,$job_category,$mon
         <p>$sort_description</p>
     </div>
 
+    <div class=\"posted\">
+        posted by <a href=\"profileE.php?userName={$id}\">@$firstname $lastname</a>
+    </div>
+
     <div class=\"btn\">
         <a href=\"full_job_post.php?id={$row}\"><button>Full Details</button></a>
     </div>
@@ -52,3 +58,4 @@ function elements($row,$company_name,$job_title,$job_location,$job_category,$mon
 echo $elemnt;}
 
 ?>
+

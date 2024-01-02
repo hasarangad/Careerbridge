@@ -64,7 +64,7 @@
         </div>
 
         <div class="settings">
-            <a href="checkCV.php"><button>Go Back</button></a>
+            <a href="jobPageE.php"><button>Go Back</button></a>
         </div>
     </div>
 </body>

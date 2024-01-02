@@ -154,7 +154,7 @@
         </form>
         
         <div class="btn2">
-                <a href="jobPage.php">
+                <a href="jobPageE.php">
                     <button name="cancel">cancel</button>
                 </a>
         </div>
