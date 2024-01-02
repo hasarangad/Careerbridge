@@ -57,10 +57,10 @@
         <img src="<?php echo $img;?>" alt="profile_pic">
         <h3 class="full name"><?php echo $fullName;?></h3>
         <strong class="email"><?php echo $email;?></strong>
-        <p class="qulification">cyber security undergradute</p>
+        <p class="qulification"><?php echo $row['qualification'];?></p>
 
         <div class="job_type">
-            <strong>Job Seeker</strong>
+            <strong><?php echo $loginType;?></strong>
         </div>
 
         <div class="settings">
