@@ -48,7 +48,7 @@ function elements($id,$row,$company_name,$job_title,$job_location,$job_category,
     </div>
 
     <div class=\"btn\">
-        <a href=\"full_job_post.php?id={$row}\"><button>Full Details</button></a>
+        <a href=\"full_job_postE.php?id={$row}\"><button>Full Details</button></a>
     </div>
      
 

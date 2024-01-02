@@ -2,7 +2,7 @@
     session_start();
 
     include 'dbh.inc.php';
-    include './php/full_job_post.php';
+    include './php/full_job_postE.php';
     
     //variables
     $uName;
