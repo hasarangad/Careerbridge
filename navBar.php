@@ -10,7 +10,7 @@
     <nav class="header">
         <div class="logo">
             <img src="./Images/Logo.png" alt="Logo">
-            <a href="#">CareerBridge</a>
+            <a href="homeE.php">CareerBridge</a>
         </div>
         <div class="navbar">
             <a href="settingE.php">Settings</a>
