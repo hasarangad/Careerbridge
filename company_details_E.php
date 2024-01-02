@@ -1,12 +1,15 @@
+<?php
+    include 'dbh.inc.php';
+    include 'php/com_element_E.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=fo, initial-scale=1.0">
-    <title>Company_details_S</title>
+    <title>Company_details</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/company.css">
-    <link rel="stylesheet" href="styleNavF.css">
+    <link rel="stylesheet" href="CSS/company.css">
 </head>
 
 <body>
@@ -19,13 +22,12 @@
     <div class="main">
         
         <?php
-        include ('php/connection.php');
-            include ('php/com_element_E.php');
+        
 
             $id = $_GET['id'];
             $sql ="SELECT * FROM company WHERE com_id={$id}";
 
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
        
             if($row = mysqli_fetch_assoc($result)){
 
@@ -48,7 +50,7 @@
             $id = $_GET['id'];
             $sql ="SELECT * FROM job WHERE com_id={$id}";
 
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result)>0){
                 while($rows =mysqli_fetch_assoc($result)){
@@ -74,11 +76,24 @@
             $id = $_GET['id'];
             $sql ="SELECT * FROM reviews WHERE com_id={$id}";
 
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result)>0){
                 while($rows =mysqli_fetch_assoc($result)){
-                    review_elem($rows['user_name'],$rows['email'],$rows['comment']);     
+                    $uname = $rows['userName'];
+                    $img;
+                    $sql1 = "SELECT * FROM user WHERE userName = ?";
+                    $stmt = mysqli_stmt_init($conn);
+                    if(mysqli_stmt_prepare($stmt, $sql1)){
+                        mysqli_stmt_bind_param($stmt,"s", $uname);
+                        mysqli_stmt_execute($stmt);
+                        $result1 = mysqli_stmt_get_result($stmt);
+                        $row = mysqli_fetch_assoc($result1);
+                        $uploads_dir = 'Images/pp';
+                        $pname = $row['pp'];
+                        $img = $uploads_dir.'/'.$pname;                        
+                    }
+                    review_elem($rows['user_name'],$rows['email'],$rows['comment'],$img);     
                 }   
             }
         ?>
@@ -97,11 +112,6 @@
 </body>
 
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
-
 
 
 
