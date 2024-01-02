@@ -28,12 +28,12 @@ else{
 
         <div class="block1">
             <img src="Images/new.jpg" alt="post">
-            <a href="#"><button>New Feedback and Comments for Application</button></a>    
+            <a href="#"><button>Interviews</button></a>    
         </div>
 
         <div class="block2">
             <img src="Images/new.jpg" alt="post">
-            <a href="#"><button>My Company And Post</button></a>
+            <a href="my_company_and_post.php"><button>My Company And Post</button></a>
         </div>
 
         <div class="block3">
