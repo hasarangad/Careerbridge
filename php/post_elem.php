@@ -8,7 +8,7 @@ $elemnt =
 <div class=\"container\">
 
     <div class=\"logo\">
-        <img src=\"images/$company_logo\" alt=\"logo\">
+        <img src=\"companyLogo/$company_logo\" alt=\"logo\">
     </div>
 
     <div class =\"block\">

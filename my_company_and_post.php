@@ -1,4 +1,15 @@
-
+<?php
+            include 'dbh.inc.php';
+            include 'php/post_elem.php';
+            $uName;
+            session_start();
+            if(!isset($_SESSION['uName'])){
+                header('Location: login.php');
+             }
+             else{
+                 $uName = $_SESSION['uName'];
+             }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +31,11 @@
     <div class="main">
         <?php
 
-            include ('php/connection.php');
-            include ('php/post_elem.php');
-            session_start();
+            $id = $uName;
 
-            if(!isset($_SESSION['user_id'])){
-                header('Location: loging.php'); 
-            }
+            $sql ="SELECT * FROM company WHERE userName = '$id'";
 
-            $id = $_SESSION['user_id'];
-
-            $sql ="SELECT * FROM company WHERE id = {$id}";
-
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
 
 
             if(mysqli_num_rows($result)>0){
@@ -52,12 +55,10 @@
         <?php
             
             include('php/job_elem_update_and_delete.php');
-            
-            $id = $_SESSION['user_id'];
 
-                $sql ="SELECT * FROM job WHERE id = {$id}";
+                $sql ="SELECT * FROM job WHERE userName = '$id'";
             
-                $result = mysqli_query($connection,$sql);
+                $result = mysqli_query($conn,$sql);
             
             
                 if(mysqli_num_rows($result)>0){
@@ -85,8 +86,4 @@
 
 </body>
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
 
