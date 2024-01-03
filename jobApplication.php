@@ -27,10 +27,11 @@ if (isset($_POST['applicationSubmit'])) {
         }
 
         // Insert data into the database
-        $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status')";
+        $sql = "INSERT INTO job_applications (job_id, contact_number, full_name, email, dob, resume_path, status, userName) VALUES ('$job_id', '$contact_number', '$full_name', '$email', '$dob', '$file_path', '$status', '$uName')";
 
         if ($conn->query($sql) === TRUE) {
             $msg = "Application submitted successfully!";
+            header("Location: applied_jobs_view.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
