@@ -44,8 +44,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/post_update.css">
-    <link rel="stylesheet" href="styleNavF.css">
+    <link rel="stylesheet" href="CSS/post_update.css">
     <title>Job post</title>
 </head>
 
@@ -74,10 +73,10 @@
         
                 $hide = 2;
                 $value= '   <div class="popup">
-                                <img src="img/tick.png" alt="tick">
+                                <img src="Images/tick.png" alt="tick">
                                 <h2>Update Successfully!</h2>
                                 <p>Your details has been successfully updated. Thanks!</p>
-                                <a href="find_job_E.php"><button>Back</button></a>
+                                <a href="jobPageE.php"><button>Back</button></a>
                             </div>';
             }
         ?>
