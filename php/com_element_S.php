@@ -19,7 +19,7 @@ $elemnt =
 
             <div class = \"btn\">
                 <a href=\"feedback.php\">
-                    <button role=\"link\">Add Reviwe</button>
+                    <button role=\"link\">Add Review</button>
                 </a>
             </div>
         </div>
