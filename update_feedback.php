@@ -1,9 +1,9 @@
 <?php
-include ('php/connection.php');
+include ('dbh.inc.php');
 session_start();
 
-if(!isset($_SESSION['user_id'])){
-    header('Location: loging.php'); 
+if(!isset($_SESSION['uName'])){
+    header('Location: login.php'); 
     
 }?>
 
@@ -14,7 +14,7 @@ $id =$_GET['comment_id'];
 
 $sql ="SELECT * FROM reviews WHERE comment_id = {$id}";
 
-$result_set = mysqli_query($connection,$sql);
+$result_set = mysqli_query($conn,$sql);
 
 $value1 ='';
 $value2 = '';
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 
 
         $query = "UPDATE reviews set user_name = '$name' ,email = '$email' , comment ='$comment'  WHERE comment_id ='$id' ";
-        $result = mysqli_query($connection,$query);
+        $result = mysqli_query($conn,$query);
 
         $hide = 2;
         $value= '   <div class="popup">
@@ -133,9 +133,5 @@ if(isset($_POST['submit'])){
 
 </body>
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
 
 
