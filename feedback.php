@@ -8,7 +8,6 @@ if(!isset($_SESSION['uName'])){
 $value = '';
 $errors = array();
 $user_id = $_SESSION['uName'];
-$user_email = $_SESSION['email'];
 
         $query = "SELECT com_id, company_name FROM company";
         $result_set = mysqli_query($conn,$query);
@@ -29,25 +28,20 @@ $user_email = $_SESSION['email'];
                 while($rows =mysqli_fetch_assoc($res)){
                       $value1= $rows['company_name'];
                 }
-            //check user email is same or not same 
-            $value_1 = strcmp($user_email,$email);
+        
 
-            if(!$value_1 == 0){
-                $errors[] = 'Enter your valid email';
-            }
-
-            if (empty($errors)) {
+            
 
                 $sql ="INSERT INTO reviews(com_id,user_name,comment,email,id,company_name) VALUES ('$id','$name','$comment','$email','$user_id','$value1')";
                 $result = mysqli_query($conn,$sql);
                 $hide =2; 
                 $value= '   <div class="popup">
-                                <img src="img/tick.png" alt="tick">
+                                <img src="Images/tick.png" alt="tick">
                                 <h2>Thank You!</h2>
                                 <p>Your feedback has been successfully submitted. Thanks!</p>
                                 <a href="view_feedback.php"><button>Back to notification page</button></a>
                             </div>';
-                }
+                
         }        
  ?>
 
