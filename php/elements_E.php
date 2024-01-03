@@ -9,7 +9,7 @@ function elements($rows,$company_logo,$company_name,$location,$employee,$industr
     <div class=\"row1\">
         <div class=\"culom1\">
             <div class=\"logo\">
-                <img src=\"companyLogo/$company_logo\" alt=\"logo\">
+                <img src=\"companyLogo/$company_logo\" alt=\"logo\" class=\"cImage\">
             </div>
         </div>
         <div class=\"culom2\">
