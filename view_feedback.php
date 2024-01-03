@@ -1,3 +1,9 @@
+<?php
+    include'dbh.inc.php';
+    include 'php/update_elem.php';
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,15 +28,13 @@
     <div class="rapper">
 
         <?php
-            include('php/connection.php');
-            include ('php/update_elem.php');
-            session_start();
+            
     
             $id = $_SESSION['user_id'];
 
             $sql ="SELECT * FROM reviews WHERE id={$id}";
 
-            $result = mysqli_query($connection,$sql);
+            $result = mysqli_query($conn,$sql);
 
             if(mysqli_num_rows($result)>0){
                 while($rows =mysqli_fetch_assoc($result)){
@@ -52,8 +56,3 @@
 
 </body>
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
-
