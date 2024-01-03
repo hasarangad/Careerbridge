@@ -47,7 +47,7 @@
         $result = mysqli_query($conn,$sql);
         $hide = 2;
         $value= '   <div class="popup">
-                        <img src="img/tick.png" alt="tick">
+                        <img src="Images/tick.png" alt="tick">
                         <h2>Thank You!</h2>
                         <p>Your job post have been successfully added. Thanks!</p>
                         <a href="jobPageE.php"><button>Back to find job page</button></a>
@@ -65,14 +65,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/form.css">
-
+    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="stylesheet" href="CSS/post_update.css">
     
     <title>Job post</title>
 </head>
 <body>
 
-<nav>
+<!-- <nav>
 
 <img src="Images/Logo.png" alt="logo">
 <h1>CareerBridge</h1>
@@ -84,9 +84,12 @@
     <li><a href="settingE.php">Settings</a></li>
 <ul>
     
-</nav> 
-
+</nav>  -->
+<?php include 'navBar.php';?>
 <?php if(!isset($hide)) { ?>
+    <div class="rapper">
+
+    
     <div class="container">
         <div class="title">Add job post</div>
         <form method="POST" action="add_jobpost.php">
@@ -160,12 +163,13 @@
         </div>
         
     </div>
-
+    </div>
 <?php } ?>
+
 	<?php
 	    echo $value ;
 	?>
-
+<?php include 'footer.php';?>
 </body>
 </html>
 

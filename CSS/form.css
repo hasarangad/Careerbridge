@@ -6,21 +6,21 @@
     font-family: Montserrat;
 }
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgb(186, 248, 224);
     background: linear-gradient(90deg, rgb(150, 238, 197) 0%, rgba(255, 255, 255, 1) 50%, rgb(156, 236, 211) 100%);
     padding: 10px;
-}
+} */
 
 h1 {
     text-align: center;
     margin-bottom: 10px;
 }
 
-.popup {
+/* .popup {
     width: 350px;
     background-color: #fff;
     border-radius: 6px;
@@ -40,16 +40,16 @@ h1 {
     margin-top: -50px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.popup h2 {
+/* .popup h2 {
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0 10px;
     font-family: Montserrat;
-}
+} */
 
-.popup p {
+/* .popup p {
     margin-bottom: 40px;
     font-family: Montserrat;
 }
@@ -63,10 +63,10 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     color: #333;
     padding: 5px;
-}
+} */
 
 .container {
-    margin-top: 90px;
+    /* margin-top: 90px; */
     width: 1100px;
     background: #fff;
     padding: 25px 30px;
@@ -210,7 +210,7 @@ form .button input:hover {
     cursor: pointer;
 }
 
-nav {
+/* nav {
     height: 80px;
     background-color: #fff;
     position: fixed;
@@ -285,4 +285,4 @@ label #s2 {
 
 #res-menu {
     display: none;
-}
+} */
