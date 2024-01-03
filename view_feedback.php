@@ -17,7 +17,7 @@
 <body>
     <!--Navigation bar-->
     <?php
-        include ('navBar.php');
+        include ('navBarS.php');
     ?>
 
 <div class="container">
