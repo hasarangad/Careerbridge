@@ -45,7 +45,7 @@ if(mysqli_num_rows($result_set)>0){
 <body>
     <!--Navigation bar-->
     <?php
-        include ('navBar.php');
+        include ('navBarS.php');
     ?>
 <?php
 
