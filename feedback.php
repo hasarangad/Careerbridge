@@ -32,7 +32,7 @@ $user_id = $_SESSION['uName'];
 
             
 
-                $sql ="INSERT INTO reviews(com_id,user_name,comment,email,id,company_name) VALUES ('$id','$name','$comment','$email','$user_id','$value1')";
+                $sql ="INSERT INTO reviews(com_id,user_name,comment,email,userName,company_name) VALUES ('$id','$name','$comment','$email','$user_id','$value1')";
                 $result = mysqli_query($conn,$sql);
                 $hide =2; 
                 $value= '   <div class="popup">
@@ -68,18 +68,6 @@ $user_id = $_SESSION['uName'];
             <h1>Feedback Form</h1>
             <p>Give the samll feedback for company or give a any comments website working</p>
         </div>
-
-        <?php 
-			if (!empty($errors)) {
-				echo '<div class="errors">';
-				echo '<p>Error detected. Check following errors:</p>';
-				foreach ($errors as $error) {
-					echo '- ' . $error .'<br>';
-				}
-				echo '</div>';
-			}
-
-		 ?>
 
         <form id ="feedback" method="post" action="feedback.php">
             <div class="input_data">
