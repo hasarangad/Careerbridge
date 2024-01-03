@@ -1,17 +1,17 @@
 <?php
-include ('php/connection.php');
+include ('dbh.inc.php');
 session_start();
 
-if(!isset($_SESSION['user_id'])){
-    header('Location: loging.php'); 
+if(!isset($_SESSION['uName'])){
+    header('Location: login.php'); 
 }
 $value = '';
 $errors = array();
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['uName'];
 $user_email = $_SESSION['email'];
 
         $query = "SELECT com_id, company_name FROM company";
-        $result_set = mysqli_query($connection,$query);
+        $result_set = mysqli_query($conn,$query);
         $list = '';
         while($row = mysqli_fetch_assoc($result_set)){
         $list .= "<option value=\"{$row['com_id']}\">{$row['company_name']}</option>";
@@ -24,7 +24,7 @@ $user_email = $_SESSION['email'];
             $comment = $_POST['comment'];
  
             $sql1 ="SELECT * FROM company WHERE com_id ={$id}";
-            $res = mysqli_query($connection,$sql1);
+            $res = mysqli_query($conn,$sql1);
             $value1 ='';
                 while($rows =mysqli_fetch_assoc($res)){
                       $value1= $rows['company_name'];
@@ -39,7 +39,7 @@ $user_email = $_SESSION['email'];
             if (empty($errors)) {
 
                 $sql ="INSERT INTO reviews(com_id,user_name,comment,email,id,company_name) VALUES ('$id','$name','$comment','$email','$user_id','$value1')";
-                $result = mysqli_query($connection,$sql);
+                $result = mysqli_query($conn,$sql);
                 $hide =2; 
                 $value= '   <div class="popup">
                                 <img src="img/tick.png" alt="tick">
@@ -138,10 +138,6 @@ $user_email = $_SESSION['email'];
 
 </body>
 </html>
-
-<?php
-    mysqli_close($connection);
-?>
 
 
 
