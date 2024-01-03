@@ -40,8 +40,7 @@ if(mysqli_num_rows($result_set)>0){
     <meta name="viewport" content="width=fo, initial-scale=1.0">
     <title>Feedback_form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/feedback.css">
-    <link rel="stylesheet" href="styleNavF.css">
+    <link rel="stylesheet" href="CSS/feedback.css">
 </head>
 <body>
     <!--Navigation bar-->
