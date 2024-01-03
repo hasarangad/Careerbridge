@@ -51,11 +51,11 @@ function elements($company_name,$job_title,$job_location,$job_category,$monthly_
     </div>
 <br>
     <div class=\"button\">
-        <input type=\"submit\" value=\"Apply now\">
+    <a href=\"jobApplication.php\"><input type=\"submit\" value=\"Apply now\"></a>
     </div>
     
     <div class=\"button\">
-        <a href=\"find_job_E.php\"><input type=\"reset\" value=\"Back To Job Page\"></a>
+        <a href=\"jobPageS.php\"><input type=\"reset\" value=\"Back To Job Page\"></a>
     </div>
 
 
