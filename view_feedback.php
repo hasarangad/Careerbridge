@@ -30,9 +30,9 @@
         <?php
             
     
-            $id = $_SESSION['user_id'];
+            $id = $_SESSION['uName'];
 
-            $sql ="SELECT * FROM reviews WHERE id={$id}";
+            $sql ="SELECT * FROM reviews WHERE userName= '$id'";
 
             $result = mysqli_query($conn,$sql);
 

@@ -1,115 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 * {
-    margin: 0;
     padding: 0;
-}
-
-.clearfix {
-    overflow: auto;
-}
-
-body {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-nav {
-    height: 80px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    border-bottom: .5px solid black;
+    margin: 0;
     font-family: Montserrat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .title {
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    letter-spacing: .2em;
     font-weight: bold;
-    width: 100%;
-    z-index: 11;
-}
-
-nav img {
-    position: absolute;
-    top: 10px;
-    width: 60px;
-    height: 60px;
-    left: 20px;
-    border: 0;
-    border-radius: 50%;
-}
-
-nav h1 {
-    position: absolute;
-    width: 200px;
-    top: 0;
-    color: black;
-    left: 85px;
-    font-weight: 900;
-    margin-top: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 2px 2px 2px #aaa;
-}
-
-nav ul {
-    float: right;
-    margin-right: 5px;
-    margin-top: 27px;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    line-height: 60x;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    padding: 5px 0;
-    color: black;
-    font-size: 18px;
-    padding: 22px 15px 30px 15px;
-}
-
-nav ul li a:hover {
-    border-bottom: 4px solid blue;
-    color: blue;
-}
-
-label #s1,
-label #s2 {
-    font-size: 30px;
-    color: #000;
-    float: right;
-    line-height: 60px;
-    margin-right: 30px;
-    cursor: pointer;
-    display: none;
-}
-
-#res-menu {
-    display: none;
+    font-size: 25px;
+    border-bottom: 1px solid #F83426;
+    padding-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .rapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 90px 90px 40px 90px;
 }
 
 .rapper .block {
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 20px;
     padding: 10px;
-    width: 600px;
-    height: 175px;
+    width: 650px;
     border: 1px solid #aaa;
     box-sizing: border-box;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-family: Montserrat;
     background: rgb(249, 238, 212);
     background: linear-gradient(90deg, rgba(249, 238, 212, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(249, 238, 212, 1) 100%);
 }
@@ -120,124 +50,73 @@ label #s2 {
 }
 
 .rapper .block .block1 {
-    height: 60px;
-}
-
-.rapper .block .block1 .img {
-    width: 60px;
-    float: left;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .rapper .block .block1 .img img {
     width: 50px;
-    height: 50px;
+    margin: 5px;
 }
 
 .rapper .block .block1 .profile {
-    float: left;
-    padding: 5px;
-}
-
-.rapper .block .block1 .profile .name {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 300px;
+    padding: 2px;
     font-weight: bold;
-    font-size: 17px;
 }
 
-.rapper .block .block1 .profile .email {
-    margin-top: 5px;
-    color: #414141;
-    font-size: 14px;
+.rapper .block .block1 .profile .company_name {
+    padding-top: 2px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
-.update {
-    float: left;
-    margin-left: 120px;
-    margin-top: 5px;
+.rapper .block .block1 .btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 250px;
+    padding: 5px 0;
 }
 
-.update button {
+.rapper .block .block1 .btn .update button {
     width: 100px;
     height: 40px;
     cursor: pointer;
-    border: 1px solid #eee;
+    border: 1px solid #F83426;
     border-radius: 8px;
     background-color: #F83426;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-family: Montserrat;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: .2em;
 }
 
-.delete {
-    float: left;
-    margin-left: 40px;
-    margin-top: 5px;
-}
-
-.delete button {
+.rapper .block .block1 .btn .delete button {
     width: 100px;
     height: 40px;
     cursor: pointer;
-    border: 1px solid #eee;
+    border: 1px solid #F83426;
     border-radius: 8px;
     background-color: #F83426;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-family: Montserrat;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: .2em;
+}
+
+.rapper .block .block1 .btn .update button:hover {
+    background-color: #fff;
+}
+
+.rapper .block .block1 .btn .delete button:hover {
+    background-color: #fff;
 }
 
 .rapper .block .block2 {
-    margin-top: 5px;
     text-align: justify;
-    padding: 8px;
+    padding: 5px 15px;
     font-size: 14px;
-}
-
-
-/* Responsive */
-
-@media(max-width:1050px) {
-    /* Navigation */
-    label #s1 {
-        display: block;
-        margin-top: 10px;
-    }
-    nav ul {
-        position: fixed;
-        width: 75%;
-        height: 100vh;
-        background-color: black;
-        top: 50px;
-        left: -100%;
-        text-align: center;
-        transition: 0.5s;
-        z-index: 10;
-    }
-    nav ul li {
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-    }
-    nav ul li a {
-        font-size: 16px;
-        color: white;
-    }
-    nav ul li a:hover {
-        border: 0;
-    }
-    /* For Responsive State */
-    #res-menu:checked~ul {
-        left: 0;
-    }
-    #res-menu:checked~label #s1 {
-        display: none;
-    }
-    #res-menu:checked~label #s2 {
-        display: block;
-    }
-    /* Banner */
-    .banner-text h2 {
-        font-size: 40px;
-    }
 }
