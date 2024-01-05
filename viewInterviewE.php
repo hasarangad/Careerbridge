@@ -71,7 +71,7 @@
 
         <div class="btn">
             <a href="interviewsE.php"><button>Go Back</button></a>
-            <a href="interviewsE.php"><button>Update</button></a>
+            <a href="updateInterviewE.php?id=<?php echo $applicationId;?>"><button>Update</button></a>
         </div>
         
         <?php
