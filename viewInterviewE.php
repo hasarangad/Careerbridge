@@ -48,39 +48,30 @@
                 $applicationId = $row['application_id'];
         ?>        
         
-        <h1>Application For Job ID <?php echo $row['job_id'];?>  </h1>
+        <h1>Interview For Application ID <?php echo $row['application_id'];?>  </h1>
         <div class="inlinecontent">
-            <h3>Job ID : </h3>
-            <p><?php echo $row['job_id'];?></p>
+            <h3>Application ID : </h3>
+            <p><?php echo $row['application_id'];?></p>
         </div>
 
         <div class="inlinecontent">
-            <h3>Full Name : </h3>
-            <p><?php echo $row['full_name'];?></p>
+            <h3>Email : </h3>
+            <p><?php echo $row['Email'];?></p>
         </div>
 
         <div class="inlinecontent">
-            <h3>Contact Number : </h3>
-            <p><?php echo $row['contact_number'];?></p>
+            <h3>Time : </h3>
+            <p><?php echo $row['time'];?></p>
         </div>
         
         <div class="inlinecontent">
-            <h3>Email Address : </h3>
-            <p><?php echo $row['email'];?></p>
-        </div>
-
-        <div class="inlinecontent">
-            <h3>Date of birth : </h3>
-            <p><?php echo $row['dob'];?></p>
-        </div>
-
-        <div class="inlinecontent">
-            <h3>Status : </h3>
-            <p><?php echo $row['status'];?></p>
+            <h3>Date : </h3>
+            <p><?php echo $row['date'];?></p>
+        </div>php echo $row['status'];?></p>
         </div>
 
         <div class="btn">
-            <a href="applied_jobs_view.php"><button>Go Back</button></a>
+            <a href="interviewsE.php"><button>Go Back</button></a>
         </div>
         
         <?php
