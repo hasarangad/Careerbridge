@@ -61,7 +61,7 @@
             </div>
 
             <div class="inlinecontentC">
-                <h3>Change CV : </h3>
+                <h3>Time : </h3>
                 <input type="text" name="time" value="<?php echo $row['time']?>">                
             </div>
             
