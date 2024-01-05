@@ -42,7 +42,7 @@
         <div class="box">
             <h3>Interview for application id <?php echo $row['application_id'];?> : </h3>
             <div class="button">
-                <a href="viewCV.php?id=<?php echo $applicationId;?>"><input type="submit" value="Full Details" name="fullCV"></a>
+                <a href="viewInterviewE.php?id=<?php echo $applicationId;?>"><input type="submit" value="Full Details" name="fullCV"></a>
             </div>
         </div>
         <?php
