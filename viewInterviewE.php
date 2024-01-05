@@ -23,7 +23,7 @@
         header("Location: applied_jobs_view.php");
     }
 
-    $sql = "SELECT * FROM job_applications WHERE application_id = ?";
+    $sql = "SELECT * FROM interviews WHERE application_id = ?";
     $stmt = mysqli_stmt_init($conn);
     
 ?>
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/myApplicationStyle.css">
 </head>
 <body>
-    <?php include 'navBarS.php';?>
+    <?php include 'navBar.php';?>
     <div class="container">
         <?php
         if(mysqli_stmt_prepare($stmt, $sql)){
@@ -56,7 +56,7 @@
 
         <div class="inlinecontent">
             <h3>Email : </h3>
-            <p><?php echo $row['Email'];?></p>
+            <p><?php echo $row['email'];?></p>
         </div>
 
         <div class="inlinecontent">
@@ -67,11 +67,11 @@
         <div class="inlinecontent">
             <h3>Date : </h3>
             <p><?php echo $row['date'];?></p>
-        </div>php echo $row['status'];?></p>
         </div>
 
         <div class="btn">
             <a href="interviewsE.php"><button>Go Back</button></a>
+            <a href="interviewsE.php"><button>Update</button></a>
         </div>
         
         <?php
