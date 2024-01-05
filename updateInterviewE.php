@@ -57,12 +57,12 @@
 
             <div class="inlinecontentC">
                 <h3>Date : </h3>
-                <input type="text" name="dob" id="" value="<?php echo $row['date']?>">
+                <input type="text" name="date" id="" value="<?php echo $row['date']?>">
             </div>
 
             <div class="inlinecontentC">
                 <h3>Change CV : </h3>
-                <input type="text" name="file" value="<?php echo $row['time']?>">                
+                <input type="text" name="time" value="<?php echo $row['time']?>">                
             </div>
             
             <input type="submit" value="Update" name="update">
@@ -81,16 +81,15 @@
 
     <?php
         if(isset($_POST['update'])){
-            $fullName = mysqli_real_escape_string($conn, $_POST['fullName']);
-            $contact = mysqli_real_escape_string($conn, $_POST['contact']);
+            $time = mysqli_real_escape_string($conn, $_POST['time']);
             $email = mysqli_real_escape_string($conn, $_POST['email']);
-            $dob = mysqli_real_escape_string($conn, $_POST['dob']);
+            $date = mysqli_real_escape_string($conn, $_POST['date']);
 
             
-            $sql = "UPDATE job_applications SET full_name='$fullName',contact_number='$contact',email='$email',dob='$dob',resume_path='$file_path' WHERE application_id='$applicationId'";
+            $sql = "UPDATE interviews SET email='$email', `time`='$time', `date`='$date' WHERE application_id='$applicationId'";
  
             if(mysqli_query($conn,$sql)){
-                header("Location: viewApplication.php?id=$applicationId");
+                header("Location: viewInterviewE.php?id=$applicationId");
             }
             else{
                 echo "Error";
