@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/checkCVStyle.css">
 </head>
 <body>
-<?php include 'navBar.php';?>
+<?php include 'navBarS.php';?>
     <div class="container">
         <h1>Interviews</h1>
         <?php
