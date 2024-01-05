@@ -38,7 +38,7 @@ else{
 
         <div class="block3">
             <img src="Images/new.jpg" alt="post">
-            <a href="#"><button>Interviews</button></a>
+            <a href="interviewsS.php"><button>Interviews</button></a>
         </div>
     </div>
 
