@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM user WHERE userName = '$input_username' AND password = '$input_password'";
     $result = mysqli_query($conn, $sql);
 
-    $rsltCheck = mysqli_num_rows($result);;
+    $rsltCheck = mysqli_num_rows($result);
     if ($rsltCheck > 0) {
         // Set a session variable to indicate that the user is logged in
         $_SESSION["loggedin"] = true;
