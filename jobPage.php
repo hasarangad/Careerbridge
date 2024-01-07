@@ -21,10 +21,19 @@
 
 </head>
 <body>
-   <!-- Navigation -->
-   <?php
-       include('navBarS.php');
-   ?>
+<div class="header">
+        <div class="logo">
+            <img src="./Images/Logo.png" alt="Logo">
+            <a href="homeG.php">CareerBridge</a>
+        </div>
+        <div class="navbar">
+            <a href="selection.php">SignUp</a>
+            <a href="login.php">LogIn</a>
+            <a href="jobPage.php">Find a Job</a>
+            <a href="homeG.php">Home</a>
+        </div>
+        
+</div>
 
 <div class="rapper">
 
