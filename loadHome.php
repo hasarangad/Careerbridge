@@ -18,6 +18,9 @@
         if($type == "Employee"){
             header("Location: homeE.php");
         }
+        elseif($type == "admin"){
+            header("Location: ../AdminCareerBridge/dashboard.php");
+        }
         else{
             header("Location: homeS.php");
         }
