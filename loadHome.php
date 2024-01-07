@@ -19,7 +19,7 @@
             header("Location: homeE.php");
         }
         elseif($type == "admin"){
-            header("Location: ../AdminCareerBridge/dashboard.php");
+            header("Location: ../AdminCareerBridge/dashboard.php?uName=$uName");
         }
         else{
             header("Location: homeS.php");
