@@ -46,7 +46,7 @@
 
             <div class="form">
                 <div class="input">
-                    <input type="text" name="search" placeholder="Enter campany name" autofocus>
+                    <input type="text" name="search" placeholder="Enter company name" autofocus>
                 </div>
 
                 <div class="btn">
