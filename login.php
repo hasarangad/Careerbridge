@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input_password = $_POST["pwd"];
 
     // Query the database to check if the entered credentials are correct
-    $sql = "SELECT * FROM user WHERE userName = '$input_username' AND password = '$input_password'";
+    $sql = "SELECT * FROM user WHERE userName = '$input_username' AND password = '$input_password' AND isActive = 'true'";
     $result = mysqli_query($conn, $sql);
 
     $rsltCheck = mysqli_num_rows($result);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //exit;
     } else {
         // Display an error message if the credentials are incorrect
-        $error_message = "Incorrect username or password";
+        $error_message = "Incorrect username, password or Dosent active your account";
     }
 }
 ?>
