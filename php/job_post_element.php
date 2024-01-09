@@ -44,7 +44,7 @@ function elements($id,$row,$company_name,$job_title,$job_location,$job_category,
     </div>
 
     <div class=\"posted\">
-        posted by <a href=\"profileE.php?userName={$id}\">@$firstname $lastname</a>
+        posted by <a href=\"profileE_E.php?userName={$id}\">@$firstname $lastname</a>
     </div>
 
     <div class=\"btn\">
