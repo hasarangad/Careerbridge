@@ -42,7 +42,7 @@
 
                 if(mysqli_num_rows($result)>0){
                     if($rows =mysqli_fetch_assoc($result)){
-                        elements($rows['company_name'],$rows['job_title'],$rows['job_location'],$rows['job_category'],$rows['monthly_Salary'],$rows['sort_description'],$rows['long_description'],$rows['job_type'],$rows['qulification']
+                        elements($id,$rows['company_name'],$rows['job_title'],$rows['job_location'],$rows['job_category'],$rows['monthly_Salary'],$rows['sort_description'],$rows['long_description'],$rows['job_type'],$rows['qulification']
                         );        
                     }   
                 }
