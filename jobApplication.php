@@ -4,6 +4,13 @@ session_start();
 include 'dbh.inc.php';
 
 $uName = $_SESSION['uName'];
+$id;
+if(isset($_GET['id'])){
+    $id = mysqli_real_escape_string($conn, $_GET['id']);
+}
+else{
+    header("Location: jobPageS.php");
+}
 
 if (isset($_POST['applicationSubmit'])) {
     // Form has been submitted, process the data
@@ -63,7 +70,7 @@ if (isset($_POST['applicationSubmit'])) {
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
-                        <input type="text" id="job-id" name="job-id" placeholder="Enter your Job ID">
+                        <input type="text" id="job-id" name="job-id" value="<?php echo $id;?>">
                     </div>
                     <div class="form-control">
                         <label for="contact-number">Contact Number :</label>
