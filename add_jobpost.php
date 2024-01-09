@@ -4,6 +4,8 @@
     include 'dbh.inc.php';
     
     $uName;
+    $id;
+    
     if(!isset($_SESSION["uName"])){
         header('Location: login.php');  
     }
