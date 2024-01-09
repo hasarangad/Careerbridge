@@ -28,7 +28,7 @@
                
     $stmt = mysqli_stmt_init($conn);
     if(mysqli_stmt_prepare($stmt, $sql)){
-        mysqli_stmt_bind_param($stmt,"s", $uName);
+        mysqli_stmt_bind_param($stmt,"s", $applicationId);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         $row = mysqli_fetch_assoc($result);
@@ -64,7 +64,7 @@
         </div>
 
         <div class="settings">
-            <a href="jobPageE.php"><button>Go Back</button></a>
+            <a href="jobPageS.php"><button>Go Back</button></a>
         </div>
     </div>
 </body>

@@ -93,6 +93,7 @@ h3 {
 
 .container {
     width: 480px;
+    height:auto;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #aaa;
@@ -132,7 +133,7 @@ h3 {
 }
 
 .container .row4 {
-    height: 130px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     padding: 5px;
