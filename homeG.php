@@ -49,7 +49,7 @@
             <br>
         </div>
         <div class="btn">
-            <input type="submit" value="Search">
+            <a href="login.php"><input type="submit" value="Search"></a>
         </div>
         </div>
         
