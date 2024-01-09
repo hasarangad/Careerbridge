@@ -37,7 +37,7 @@
             <br>
         </div>
         <div class="btn">
-            <input type="submit" value="Search">
+            <a href="jobPageS.php"><input type="submit" value="Search"></a>
         </div>
         </div>
         
