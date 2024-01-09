@@ -70,7 +70,7 @@ if (isset($_POST['applicationSubmit'])) {
                 <div class="form-container">
                     <div class="form-control">
                         <label for="job-id">Job ID :</label>
-                        <input type="text" id="job-id" name="job-id" value="<?php echo $id;?>">
+                        <input type="text" id="job-id" name="job-id" value="<?php echo $id;?>" readonly>
                     </div>
                     <div class="form-control">
                         <label for="contact-number">Contact Number :</label>
