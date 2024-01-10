@@ -98,7 +98,7 @@
             <div class="userdetails">
 
                 <div class="inputbox">
-                    <span>Company Name : </span>
+                    <span>Enter Your Company Name : </span>
                     <select name="id" id="">
                         <?php
                             echo $list;
